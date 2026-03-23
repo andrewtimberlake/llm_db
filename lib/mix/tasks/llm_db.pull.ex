@@ -75,8 +75,7 @@ defmodule Mix.Tasks.LlmDb.Pull do
   def run(args) do
     ensure_llm_db_project!()
 
-    # Load .env before starting app
-    load_dotenv()
+    load_runtime_config_and_dotenv()
 
     Mix.Task.run("app.start")
 
@@ -121,6 +120,14 @@ defmodule Mix.Tasks.LlmDb.Pull do
     print_summary(results)
 
     Mix.shell().info("\nRun 'mix llm_db.build' to generate the canonical snapshot artifact")
+  end
+
+  @doc false
+  def load_runtime_config_and_dotenv do
+    # Load runtime.exs before consulting :load_dotenv so runtime configuration
+    # can disable dotenv loading for this task.
+    Mix.Task.run("app.config")
+    LLMDB.Dotenv.load!()
   end
 
   # Pull from all sources and return list of {module, result} tuples
@@ -256,15 +263,6 @@ defmodule Mix.Tasks.LlmDb.Pull do
       |> Enum.each(fn {_, path, _} ->
         File.rm(path)
       end)
-    end
-  end
-
-  defp load_dotenv do
-    env_path = Path.join(File.cwd!(), ".env")
-
-    if File.exists?(env_path) do
-      vars = Dotenvy.source!(env_path)
-      System.put_env(vars)
     end
   end
 
