@@ -4816,21 +4816,21 @@
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 1.2
+            "value": 1.22
           }
         ],
         "input_cache_read": [
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 0.06
+            "value": 0.061
           }
         ],
         "prompt": [
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 0.3
+            "value": 0.31
           }
         ]
       }
