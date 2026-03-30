@@ -260,21 +260,13 @@
         "prompt": "0.0000003"
       },
       "supported_parameters": [
-        "frequency_penalty",
         "include_reasoning",
-        "logit_bias",
         "max_tokens",
-        "min_p",
-        "presence_penalty",
         "reasoning",
-        "repetition_penalty",
         "response_format",
-        "seed",
-        "stop",
         "temperature",
         "tool_choice",
         "tools",
-        "top_k",
         "top_p"
       ],
       "top_provider": {
@@ -2429,11 +2421,7 @@
       "per_request_limits": null,
       "pricing": {
         "completion": "0",
-        "image": "0",
-        "internal_reasoning": "0",
-        "prompt": "0",
-        "request": "0",
-        "web_search": "0"
+        "prompt": "0"
       },
       "supported_parameters": [
         "max_tokens",

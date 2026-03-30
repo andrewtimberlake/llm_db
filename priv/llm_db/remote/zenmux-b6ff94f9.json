@@ -3276,7 +3276,9 @@
       }
     },
     {
-      "capabilities": {},
+      "capabilities": {
+        "reasoning": true
+      },
       "context_length": 128000,
       "created": 1765504224,
       "display_name": "OpenAI: GPT-5.2 Chat",
@@ -3290,7 +3292,37 @@
       "output_modalities": [
         "text"
       ],
-      "owned_by": "openai"
+      "owned_by": "openai",
+      "pricings": {
+        "completion": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 14
+          }
+        ],
+        "input_cache_read": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.175
+          }
+        ],
+        "prompt": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 1.75
+          }
+        ],
+        "web_search": [
+          {
+            "currency": "USD",
+            "unit": "perCount",
+            "value": 0.01
+          }
+        ]
+      }
     },
     {
       "capabilities": {
@@ -3581,7 +3613,9 @@
       }
     },
     {
-      "capabilities": {},
+      "capabilities": {
+        "reasoning": true
+      },
       "context_length": 128000,
       "created": 1765179897,
       "display_name": "DeepSeek: DeepSeek V3.2",
@@ -3593,7 +3627,23 @@
       "output_modalities": [
         "text"
       ],
-      "owned_by": "deepseek"
+      "owned_by": "deepseek",
+      "pricings": {
+        "completion": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.43
+          }
+        ],
+        "prompt": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.28
+          }
+        ]
+      }
     },
     {
       "capabilities": {
@@ -4093,7 +4143,9 @@
       }
     },
     {
-      "capabilities": {},
+      "capabilities": {
+        "reasoning": true
+      },
       "context_length": 400000,
       "created": 1763084610,
       "display_name": "OpenAI: GPT-5.1",
@@ -4107,7 +4159,37 @@
       "output_modalities": [
         "text"
       ],
-      "owned_by": "openai"
+      "owned_by": "openai",
+      "pricings": {
+        "completion": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 10
+          }
+        ],
+        "input_cache_read": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.125
+          }
+        ],
+        "prompt": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 1.25
+          }
+        ],
+        "web_search": [
+          {
+            "currency": "USD",
+            "unit": "perCount",
+            "value": 0.01
+          }
+        ]
+      }
     },
     {
       "capabilities": {
@@ -5267,8 +5349,10 @@
       }
     },
     {
-      "capabilities": {},
-      "context_length": 160000,
+      "capabilities": {
+        "reasoning": true
+      },
+      "context_length": 163840,
       "created": 1764137601,
       "display_name": "DeepSeek: DeepSeek-V3.2-Exp",
       "id": "deepseek/deepseek-v3.2-exp",
@@ -5279,7 +5363,23 @@
       "output_modalities": [
         "text"
       ],
-      "owned_by": "deepseek"
+      "owned_by": "deepseek",
+      "pricings": {
+        "completion": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.328
+          }
+        ],
+        "prompt": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.216
+          }
+        ]
+      }
     },
     {
       "capabilities": {
@@ -7100,6 +7200,20 @@
       ],
       "owned_by": "google",
       "pricings": {
+        "audio_cache_read": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.03
+          }
+        ],
+        "audio_input": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.3
+          }
+        ],
         "completion": [
           {
             "currency": "USD",
@@ -7111,7 +7225,7 @@
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 0.025
+            "value": 0.01
           }
         ],
         "input_cache_write_1_h": [
@@ -7433,6 +7547,20 @@
       ],
       "owned_by": "google",
       "pricings": {
+        "audio_cache_read": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.1
+          }
+        ],
+        "audio_input": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 1
+          }
+        ],
         "completion": [
           {
             "currency": "USD",
@@ -7444,7 +7572,7 @@
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 0.075
+            "value": 0.03
           }
         ],
         "input_cache_write_1_h": [
@@ -7527,7 +7655,7 @@
             },
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 0.31
+            "value": 0.13
           },
           {
             "conditions": {
@@ -7538,7 +7666,7 @@
             },
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 0.625
+            "value": 0.25
           }
         ],
         "input_cache_write_1_h": [
@@ -8094,7 +8222,9 @@
       }
     },
     {
-      "capabilities": {},
+      "capabilities": {
+        "reasoning": false
+      },
       "context_length": 131072,
       "created": 1764732046,
       "display_name": "Meta: Llama 4 Scout Instruct",
@@ -8107,7 +8237,23 @@
       "output_modalities": [
         "text"
       ],
-      "owned_by": "meta"
+      "owned_by": "meta",
+      "pricings": {
+        "completion": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.4
+          }
+        ],
+        "prompt": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.08
+          }
+        ]
+      }
     },
     {
       "capabilities": {

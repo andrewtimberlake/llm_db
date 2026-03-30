@@ -18264,6 +18264,35 @@
         "structured_output": false,
         "tool_call": false
       },
+      "zai-org/glm-5.1": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 2.55
+        },
+        "family": "glm",
+        "id": "zai-org/glm-5.1",
+        "last_updated": "2026-03-27",
+        "limit": {
+          "context": 200000,
+          "input": 200000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-27",
+        "structured_output": true,
+        "tool_call": true
+      },
       "TEE/qwen3.5-397b-a17b": {
         "attachment": false,
         "cost": {
@@ -24164,6 +24193,35 @@
         "release_date": "2024-12-06",
         "structured_output": false,
         "tool_call": false
+      },
+      "zai-org/glm-5.1:thinking": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 2.55
+        },
+        "family": "glm",
+        "id": "zai-org/glm-5.1:thinking",
+        "last_updated": "2026-03-27",
+        "limit": {
+          "context": 200000,
+          "input": 200000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.1 Thinking",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-27",
+        "structured_output": true,
+        "tool_call": true
       },
       "tencent/Hunyuan-MT-7B": {
         "attachment": false,
@@ -39415,35 +39473,6 @@
         "temperature": true,
         "tool_call": false
       },
-      "nvidia/nemotron-3-super-120b-a12b-free": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "family": "nemotron",
-        "id": "nvidia/nemotron-3-super-120b-a12b-free",
-        "knowledge": "2024-04",
-        "last_updated": "2026-03-11",
-        "limit": {
-          "context": 262144,
-          "output": 262144
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Nemotron 3 Super (free)",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2026-03-11",
-        "temperature": true,
-        "tool_call": true
-      },
       "deepseek/deepseek-chat-v3.1": {
         "attachment": false,
         "cost": {
@@ -40208,6 +40237,35 @@
         "reasoning": false,
         "release_date": "2025-07-29",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "nvidia/nemotron-3-super-120b-a12b:free": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "family": "nemotron",
+        "id": "nvidia/nemotron-3-super-120b-a12b:free",
+        "knowledge": "2024-04",
+        "last_updated": "2026-03-11",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nemotron 3 Super (free)",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-11",
         "temperature": true,
         "tool_call": true
       },
