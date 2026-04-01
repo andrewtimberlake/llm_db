@@ -587,7 +587,7 @@
     },
     {
       "capabilities": {
-        "reasoning": true
+        "reasoning": false
       },
       "context_length": 2000000,
       "created": 1772767208,
@@ -8245,63 +8245,6 @@
     },
     {
       "capabilities": {
-        "reasoning": false
-      },
-      "context_length": 1048576,
-      "created": 1756093245,
-      "display_name": "Google: Gemini 2.0 Flash Lite",
-      "id": "google/gemini-2.0-flash-lite-001",
-      "input_modalities": [
-        "text",
-        "image",
-        "file",
-        "audio"
-      ],
-      "object": "model",
-      "output_modalities": [
-        "text"
-      ],
-      "owned_by": "google",
-      "pricings": {
-        "completion": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.3
-          }
-        ],
-        "input_cache_read": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.01875
-          }
-        ],
-        "input_cache_write_1_h": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 1
-          }
-        ],
-        "prompt": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.075
-          }
-        ],
-        "web_search": [
-          {
-            "currency": "USD",
-            "unit": "perCount",
-            "value": 0.035
-          }
-        ]
-      }
-    },
-    {
-      "capabilities": {
         "reasoning": true
       },
       "context_length": 200000,
@@ -8345,63 +8288,6 @@
             "currency": "USD",
             "unit": "perMTokens",
             "value": 3
-          }
-        ]
-      }
-    },
-    {
-      "capabilities": {
-        "reasoning": false
-      },
-      "context_length": 1048576,
-      "created": 1755510950,
-      "display_name": "Google: Gemini 2.0 Flash",
-      "id": "google/gemini-2.0-flash",
-      "input_modalities": [
-        "text",
-        "image",
-        "file",
-        "audio"
-      ],
-      "object": "model",
-      "output_modalities": [
-        "text"
-      ],
-      "owned_by": "google",
-      "pricings": {
-        "completion": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.6
-          }
-        ],
-        "input_cache_read": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.0375
-          }
-        ],
-        "input_cache_write_1_h": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 1
-          }
-        ],
-        "prompt": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.15
-          }
-        ],
-        "web_search": [
-          {
-            "currency": "USD",
-            "unit": "perCount",
-            "value": 0.035
           }
         ]
       }
