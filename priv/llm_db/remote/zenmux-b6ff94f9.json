@@ -94,36 +94,9 @@
         ],
         "web_search": [
           {
-            "conditions": {
-              "web_search_type": "search_std"
-            },
             "currency": "USD",
             "unit": "perCount",
-            "value": 0.0015
-          },
-          {
-            "conditions": {
-              "web_search_type": "search_pro"
-            },
-            "currency": "USD",
-            "unit": "perCount",
-            "value": 0.0044
-          },
-          {
-            "conditions": {
-              "web_search_type": "search_pro_quark"
-            },
-            "currency": "USD",
-            "unit": "perCount",
-            "value": 0.0073
-          },
-          {
-            "conditions": {
-              "web_search_type": "search_pro_sogou"
-            },
-            "currency": "USD",
-            "unit": "perCount",
-            "value": 0.0073
+            "value": 0.01
           }
         ]
       }
@@ -351,6 +324,40 @@
             "unit": "perMTokens",
             "value": 1.0165
           }
+        ],
+        "web_search": [
+          {
+            "conditions": {
+              "web_search_type": "search_std"
+            },
+            "currency": "USD",
+            "unit": "perCount",
+            "value": 0.0015
+          },
+          {
+            "conditions": {
+              "web_search_type": "search_pro"
+            },
+            "currency": "USD",
+            "unit": "perCount",
+            "value": 0.0044
+          },
+          {
+            "conditions": {
+              "web_search_type": "search_pro_sogou"
+            },
+            "currency": "USD",
+            "unit": "perCount",
+            "value": 0.0073
+          },
+          {
+            "conditions": {
+              "web_search_type": "search_pro_quark"
+            },
+            "currency": "USD",
+            "unit": "perCount",
+            "value": 0.0073
+          }
         ]
       }
     },
@@ -449,14 +456,14 @@
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 0
+            "value": 0.8
           }
         ],
         "prompt": [
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 0
+            "value": 0.16
           }
         ]
       }

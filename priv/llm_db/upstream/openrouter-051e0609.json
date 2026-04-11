@@ -94,8 +94,9 @@
       "name": "Z.ai: GLM 5.1",
       "per_request_limits": null,
       "pricing": {
-        "completion": "0.00000396",
-        "prompt": "0.00000126"
+        "completion": "0.00000315",
+        "input_cache_read": "0.000000475",
+        "prompt": "0.00000095"
       },
       "supported_parameters": [
         "frequency_penalty",
@@ -121,7 +122,7 @@
       "top_provider": {
         "context_length": 202752,
         "is_moderated": false,
-        "max_completion_tokens": null
+        "max_completion_tokens": 65535
       }
     },
     {
@@ -211,7 +212,7 @@
       "per_request_limits": null,
       "pricing": {
         "completion": "0.0000004",
-        "prompt": "0.00000013"
+        "prompt": "0.00000012"
       },
       "supported_parameters": [
         "frequency_penalty",
@@ -9463,8 +9464,7 @@
       "name": "OpenAI: gpt-oss-20b",
       "per_request_limits": null,
       "pricing": {
-        "completion": "0.00000011",
-        "input_cache_read": "0.000000015",
+        "completion": "0.00000014",
         "prompt": "0.00000003"
       },
       "supported_parameters": [
@@ -9492,7 +9492,7 @@
       "top_provider": {
         "context_length": 131072,
         "is_moderated": false,
-        "max_completion_tokens": 131072
+        "max_completion_tokens": null
       }
     },
     {
@@ -16567,8 +16567,8 @@
       "name": "Meta: Llama 3.2 11B Vision Instruct",
       "per_request_limits": null,
       "pricing": {
-        "completion": "0.000000049",
-        "prompt": "0.000000049"
+        "completion": "0.000000245",
+        "prompt": "0.000000245"
       },
       "supported_parameters": [
         "frequency_penalty",
