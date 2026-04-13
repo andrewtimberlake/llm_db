@@ -1005,7 +1005,7 @@
         "tokenizer": "Other"
       },
       "canonical_slug": "minimax/minimax-m2.7-20260318",
-      "context_length": 204800,
+      "context_length": 196608,
       "created": 1773836697,
       "default_parameters": {
         "frequency_penalty": null,
@@ -1027,31 +1027,32 @@
       "per_request_limits": null,
       "pricing": {
         "completion": "0.0000012",
-        "input_cache_read": "0.00000006",
+        "input_cache_read": "0.000000059",
         "prompt": "0.0000003"
       },
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
+        "logit_bias",
+        "logprobs",
         "max_tokens",
-        "min_p",
         "presence_penalty",
         "reasoning",
         "repetition_penalty",
         "response_format",
-        "seed",
         "stop",
         "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
         "top_k",
+        "top_logprobs",
         "top_p"
       ],
       "top_provider": {
-        "context_length": 204800,
+        "context_length": 196608,
         "is_moderated": false,
-        "max_completion_tokens": 131072
+        "max_completion_tokens": null
       }
     },
     {
@@ -2703,7 +2704,7 @@
       "top_provider": {
         "context_length": 196608,
         "is_moderated": true,
-        "max_completion_tokens": 196608
+        "max_completion_tokens": 8192
       }
     },
     {
@@ -2980,9 +2981,9 @@
       "name": "Qwen: Qwen3 Coder Next",
       "per_request_limits": null,
       "pricing": {
-        "completion": "0.00000075",
-        "input_cache_read": "0.00000006",
-        "prompt": "0.00000012"
+        "completion": "0.0000008",
+        "input_cache_read": "0.00000012",
+        "prompt": "0.00000015"
       },
       "supported_parameters": [
         "frequency_penalty",
@@ -3004,7 +3005,7 @@
       "top_provider": {
         "context_length": 262144,
         "is_moderated": false,
-        "max_completion_tokens": 65536
+        "max_completion_tokens": 262144
       }
     },
     {
@@ -9428,7 +9429,7 @@
       "top_provider": {
         "context_length": 131072,
         "is_moderated": true,
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 8192
       }
     },
     {
@@ -11427,8 +11428,8 @@
       "per_request_limits": null,
       "pricing": {
         "completion": "0.00000215",
-        "input_cache_read": "0.000000225",
-        "prompt": "0.00000045"
+        "input_cache_read": "0.00000035",
+        "prompt": "0.0000005"
       },
       "supported_parameters": [
         "frequency_penalty",
@@ -11452,7 +11453,7 @@
       "top_provider": {
         "context_length": 163840,
         "is_moderated": false,
-        "max_completion_tokens": 65536
+        "max_completion_tokens": null
       }
     },
     {
@@ -12709,54 +12710,6 @@
         "context_length": 1047576,
         "is_moderated": true,
         "max_completion_tokens": 32768
-      }
-    },
-    {
-      "architecture": {
-        "input_modalities": [
-          "text"
-        ],
-        "instruct_type": "code-llama",
-        "modality": "text->text",
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other"
-      },
-      "canonical_slug": "eleutherai/llemma_7b",
-      "context_length": 4096,
-      "created": 1744643225,
-      "default_parameters": {},
-      "description": "Llemma 7B is a language model for mathematics. It was initialized with Code Llama 7B weights, and trained on the Proof-Pile-2 for 200B tokens. Llemma models are particularly strong at...",
-      "expiration_date": null,
-      "hugging_face_id": "EleutherAI/llemma_7b",
-      "id": "eleutherai/llemma_7b",
-      "knowledge_cutoff": "2023-04-30",
-      "links": {
-        "details": "/api/v1/models/eleutherai/llemma_7b/endpoints"
-      },
-      "name": "EleutherAI: Llemma 7b",
-      "per_request_limits": null,
-      "pricing": {
-        "completion": "0.0000012",
-        "prompt": "0.0000008"
-      },
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "top_provider": {
-        "context_length": 4096,
-        "is_moderated": false,
-        "max_completion_tokens": 4096
       }
     },
     {
