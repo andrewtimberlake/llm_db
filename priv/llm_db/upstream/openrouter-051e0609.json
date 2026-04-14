@@ -23,7 +23,7 @@
         "top_k": null,
         "top_p": null
       },
-      "description": "Elephant Alpha is a 100B-parameter text model focused on intelligence efficiency, delivering strong reasoning performance while minimizing token usage. It supports a 256K context window with up to 32K output...",
+      "description": "Elephant Alpha is a 100B-parameter text model focused on intelligence efficiency, delivering strong performance while minimizing token usage. It supports a 256K context window with up to 32K output tokens,...",
       "expiration_date": null,
       "hugging_face_id": null,
       "id": "openrouter/elephant-alpha",
@@ -5938,6 +5938,7 @@
       "per_request_limits": null,
       "pricing": {
         "completion": "0.0000025",
+        "input_cache_read": "0.00000015",
         "prompt": "0.0000006"
       },
       "supported_parameters": [
@@ -5962,7 +5963,7 @@
       "top_provider": {
         "context_length": 262144,
         "is_moderated": false,
-        "max_completion_tokens": null
+        "max_completion_tokens": 262144
       }
     },
     {
@@ -8226,60 +8227,6 @@
         "output_modalities": [
           "text"
         ],
-        "tokenizer": "Other"
-      },
-      "canonical_slug": "meituan/longcat-flash-chat",
-      "context_length": 131072,
-      "created": 1757427658,
-      "default_parameters": {},
-      "description": "LongCat-Flash-Chat is a large-scale Mixture-of-Experts (MoE) model with 560B total parameters, of which 18.6B–31.3B (≈27B on average) are dynamically activated per input. It introduces a shortcut-connected MoE design to reduce...",
-      "expiration_date": null,
-      "hugging_face_id": "meituan-longcat/LongCat-Flash-Chat",
-      "id": "meituan/longcat-flash-chat",
-      "knowledge_cutoff": "2025-03-31",
-      "links": {
-        "details": "/api/v1/models/meituan/longcat-flash-chat/endpoints"
-      },
-      "name": "Meituan: LongCat Flash Chat",
-      "per_request_limits": null,
-      "pricing": {
-        "completion": "0.0000008",
-        "input_cache_read": "0.0000002",
-        "prompt": "0.0000002"
-      },
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_p"
-      ],
-      "top_provider": {
-        "context_length": 131072,
-        "is_moderated": false,
-        "max_completion_tokens": 131072
-      }
-    },
-    {
-      "architecture": {
-        "input_modalities": [
-          "text"
-        ],
-        "instruct_type": null,
-        "modality": "text->text",
-        "output_modalities": [
-          "text"
-        ],
         "tokenizer": "Qwen3"
       },
       "canonical_slug": "qwen/qwen-plus-2025-07-28",
@@ -9925,10 +9872,8 @@
         "presence_penalty",
         "reasoning",
         "repetition_penalty",
-        "response_format",
         "seed",
         "stop",
-        "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
@@ -12582,53 +12527,6 @@
     {
       "architecture": {
         "input_modalities": [
-          "text"
-        ],
-        "instruct_type": null,
-        "modality": "text->text",
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Qwen"
-      },
-      "canonical_slug": "qwen/qwen2.5-coder-7b-instruct",
-      "context_length": 32768,
-      "created": 1744734887,
-      "default_parameters": {},
-      "description": "Qwen2.5-Coder-7B-Instruct is a 7B parameter instruction-tuned language model optimized for code-related tasks such as code generation, reasoning, and bug fixing. Based on the Qwen2.5 architecture, it incorporates enhancements like RoPE,...",
-      "expiration_date": null,
-      "hugging_face_id": "Qwen/Qwen2.5-Coder-7B-Instruct",
-      "id": "qwen/qwen2.5-coder-7b-instruct",
-      "knowledge_cutoff": "2024-06-30",
-      "links": {
-        "details": "/api/v1/models/qwen/qwen2.5-coder-7b-instruct/endpoints"
-      },
-      "name": "Qwen: Qwen2.5 Coder 7B Instruct",
-      "per_request_limits": null,
-      "pricing": {
-        "completion": "0.00000009",
-        "prompt": "0.00000003"
-      },
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "structured_outputs",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "top_provider": {
-        "context_length": 32768,
-        "is_moderated": false,
-        "max_completion_tokens": null
-      }
-    },
-    {
-      "architecture": {
-        "input_modalities": [
           "image",
           "text",
           "file"
@@ -12926,62 +12824,6 @@
         "tool_choice",
         "tools",
         "top_logprobs",
-        "top_p"
-      ],
-      "top_provider": {
-        "context_length": 131072,
-        "is_moderated": false,
-        "max_completion_tokens": null
-      }
-    },
-    {
-      "architecture": {
-        "input_modalities": [
-          "text"
-        ],
-        "instruct_type": null,
-        "modality": "text->text",
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Llama3"
-      },
-      "canonical_slug": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
-      "context_length": 131072,
-      "created": 1744115059,
-      "default_parameters": {
-        "frequency_penalty": null,
-        "presence_penalty": null,
-        "repetition_penalty": null,
-        "temperature": null,
-        "top_k": null,
-        "top_p": null
-      },
-      "description": "Llama-3.1-Nemotron-Ultra-253B-v1 is a large language model (LLM) optimized for advanced reasoning, human-interactive chat, retrieval-augmented generation (RAG), and tool-calling tasks. Derived from Meta’s Llama-3.1-405B-Instruct, it has been significantly customized using Neural...",
-      "expiration_date": null,
-      "hugging_face_id": "nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
-      "id": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
-      "knowledge_cutoff": "2024-03-31",
-      "links": {
-        "details": "/api/v1/models/nvidia/llama-3.1-nemotron-ultra-253b-v1/endpoints"
-      },
-      "name": "NVIDIA: Llama 3.1 Nemotron Ultra 253B v1",
-      "per_request_limits": null,
-      "pricing": {
-        "completion": "0.0000018",
-        "prompt": "0.0000006"
-      },
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "max_tokens",
-        "presence_penalty",
-        "reasoning",
-        "repetition_penalty",
-        "response_format",
-        "structured_outputs",
-        "temperature",
-        "top_k",
         "top_p"
       ],
       "top_provider": {
@@ -14315,8 +14157,8 @@
       "name": "Llama Guard 3 8B",
       "per_request_limits": null,
       "pricing": {
-        "completion": "0.00000006",
-        "prompt": "0.00000002"
+        "completion": "0.00000003",
+        "prompt": "0.00000048"
       },
       "supported_parameters": [
         "frequency_penalty",
@@ -17385,51 +17227,6 @@
         "context_length": 8192,
         "is_moderated": false,
         "max_completion_tokens": 2048
-      }
-    },
-    {
-      "architecture": {
-        "input_modalities": [
-          "text"
-        ],
-        "instruct_type": "gemma",
-        "modality": "text->text",
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Gemini"
-      },
-      "canonical_slug": "google/gemma-2-9b-it",
-      "context_length": 8192,
-      "created": 1719532800,
-      "default_parameters": {},
-      "description": "Gemma 2 9B by Google is an advanced, open-source language model that sets a new standard for efficiency and performance in its size class. Designed for a wide variety of...",
-      "expiration_date": null,
-      "hugging_face_id": "google/gemma-2-9b-it",
-      "id": "google/gemma-2-9b-it",
-      "knowledge_cutoff": "2024-06-30",
-      "links": {
-        "details": "/api/v1/models/google/gemma-2-9b-it/endpoints"
-      },
-      "name": "Google: Gemma 2 9B",
-      "per_request_limits": null,
-      "pricing": {
-        "completion": "0.00000009",
-        "prompt": "0.00000003"
-      },
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "repetition_penalty",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "top_provider": {
-        "context_length": 8192,
-        "is_moderated": false,
-        "max_completion_tokens": null
       }
     },
     {
