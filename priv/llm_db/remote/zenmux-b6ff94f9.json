@@ -2501,58 +2501,6 @@
     },
     {
       "capabilities": {
-        "reasoning": false
-      },
-      "context_length": 64000,
-      "created": 1770619090,
-      "display_name": "inclusionAI: Ming-flash-omni-2.0",
-      "id": "inclusionai/ming-flash-omni-2.0",
-      "input_modalities": [
-        "text",
-        "image",
-        "audio",
-        "video"
-      ],
-      "object": "model",
-      "output_modalities": [
-        "text",
-        "image",
-        "audio"
-      ],
-      "owned_by": "inclusionai",
-      "pricings": {
-        "audio": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 8.8
-          }
-        ],
-        "completion": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 1.8
-          }
-        ],
-        "image": [
-          {
-            "currency": "USD",
-            "unit": "perCount",
-            "value": 0.0282
-          }
-        ],
-        "prompt": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.8
-          }
-        ]
-      }
-    },
-    {
-      "capabilities": {
         "reasoning": true
       },
       "context_length": 400000,
