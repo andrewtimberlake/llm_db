@@ -1533,6 +1533,39 @@
         "temperature": true,
         "tool_call": true
       },
+      "glm-5.1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.17,
+          "input": 0.87,
+          "output": 3.48
+        },
+        "family": "glm",
+        "id": "glm-5.1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-14",
+        "limit": {
+          "context": 202752,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-14",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen2-5-14b-instruct": {
         "attachment": false,
         "cost": {
@@ -51772,7 +51805,6 @@
         },
         "reasoning": true,
         "release_date": "2026-04-02",
-        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -52776,6 +52808,42 @@
         "temperature": true,
         "tool_call": true
       },
+      "claude-opus-4-7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "family": "claude-opus",
+        "id": "claude-opus-4-7",
+        "knowledge": "2026-01",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.7",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/anthropic"
+        },
+        "reasoning": true,
+        "release_date": "2026-04-16",
+        "temperature": true,
+        "tool_call": true
+      },
       "gpt-5.1-codex": {
         "attachment": true,
         "cost": {
@@ -53302,7 +53370,6 @@
         },
         "reasoning": true,
         "release_date": "2026-02-16",
-        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -56054,6 +56121,39 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-02-05",
+        "temperature": true,
+        "tool_call": true
+      },
+      "claude-opus-4-7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "family": "claude-opus",
+        "id": "claude-opus-4-7",
+        "knowledge": "2026-01",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.7",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-16",
         "temperature": true,
         "tool_call": true
       },
@@ -64487,7 +64587,6 @@
         },
         "reasoning": true,
         "release_date": "2026-02-16",
-        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -64527,7 +64626,6 @@
         },
         "reasoning": true,
         "release_date": "2026-04-02",
-        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       }
@@ -79165,6 +79263,39 @@
         "temperature": true,
         "tool_call": true
       },
+      "glm-5.1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.24,
+          "input": 1.31,
+          "output": 4.1
+        },
+        "family": "glm",
+        "id": "glm-5.1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-14",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-14",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "gpt-4.1": {
         "attachment": false,
         "cost": {
@@ -79372,6 +79503,35 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-07-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-M2.7": {
+        "attachment": false,
+        "cost": {
+          "input": 0.47,
+          "output": 1.4
+        },
+        "family": "minimax",
+        "id": "minimax-M2.7",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 202752,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -79952,6 +80112,117 @@
       }
     },
     "name": "Nova",
+    "npm": "@ai-sdk/openai-compatible"
+  },
+  "hpc-ai": {
+    "api": "https://api.hpc-ai.com/inference/v1",
+    "doc": "https://www.hpc-ai.com/doc/docs/quickstart/",
+    "env": [
+      "HPC_AI_API_KEY"
+    ],
+    "id": "hpc-ai",
+    "models": {
+      "minimax/minimax-m2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.014,
+          "input": 0.14,
+          "output": 0.56
+        },
+        "family": "minimax-m2.5",
+        "id": "minimax/minimax-m2.5",
+        "last_updated": "2026-03-25",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/kimi-k2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.21,
+          "output": 1
+        },
+        "family": "kimi",
+        "id": "moonshotai/kimi-k2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01-01",
+        "last_updated": "2026-03-25",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-01",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "zai-org/glm-5.1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.12,
+          "input": 0.66,
+          "output": 2
+        },
+        "family": "glm",
+        "id": "zai-org/glm-5.1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-08",
+        "limit": {
+          "context": 202000,
+          "output": 202000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-08",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "HPC-AI",
     "npm": "@ai-sdk/openai-compatible"
   },
   "huggingface": {
@@ -106157,6 +106428,40 @@
         "temperature": true,
         "tool_call": true
       },
+      "anthropic.claude-opus-4-7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "family": "claude-opus",
+        "id": "anthropic.claude-opus-4-7",
+        "knowledge": "2026-01",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.7",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-16",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "meta.llama3-1-405b-instruct-v1:0": {
         "attachment": false,
         "cost": {
@@ -106303,6 +106608,40 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-02",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "us.anthropic.claude-opus-4-7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "family": "claude-opus",
+        "id": "us.anthropic.claude-opus-4-7",
+        "knowledge": "2026-01",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.7 (US)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-16",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -106934,6 +107273,40 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-06-20",
+        "temperature": true,
+        "tool_call": true
+      },
+      "global.anthropic.claude-opus-4-7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "family": "claude-opus",
+        "id": "global.anthropic.claude-opus-4-7",
+        "knowledge": "2026-01",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.7 (Global)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-16",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -107587,6 +107960,40 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-05-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "eu.anthropic.claude-opus-4-7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "family": "claude-opus",
+        "id": "eu.anthropic.claude-opus-4-7",
+        "knowledge": "2026-01",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.7 (EU)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-16",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -115905,6 +116312,42 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-11-20",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic/claude-opus-4.7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "id": "anthropic/claude-opus-4.7",
+        "knowledge": "2026-01",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.7",
+        "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
+        "reasoning": true,
+        "release_date": "2026-04-16",
         "temperature": true,
         "tool_call": true
       },
@@ -124246,6 +124689,45 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-02-05",
+        "temperature": true,
+        "tool_call": true
+      },
+      "claude-opus-4-7@default": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "context_over_200k": {
+            "cache_read": 1,
+            "cache_write": 12.5,
+            "input": 10,
+            "output": 37.5
+          },
+          "input": 5,
+          "output": 25
+        },
+        "family": "claude-opus",
+        "id": "claude-opus-4-7@default",
+        "knowledge": "2026-01",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.7",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-16",
         "temperature": true,
         "tool_call": true
       },

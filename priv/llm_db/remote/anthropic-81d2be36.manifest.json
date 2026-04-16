@@ -1,6 +1,6 @@
 {
   "source_url": "https://api.anthropic.com/v1/models",
-  "sha256": "902f86edd422a7f444e5e636e68489e65dbf2ed2356379a99fdb935786e459ac",
-  "downloaded_at": "2026-04-16T03:33:16.944080Z",
-  "size_bytes": 13551
+  "sha256": "e5516f96364418a312b9501f29c7d9fb670d95097ed4a511eaffbbf1d9b66f29",
+  "downloaded_at": "2026-04-16T17:12:16.277677Z",
+  "size_bytes": 15043
 }
