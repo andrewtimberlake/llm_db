@@ -23756,7 +23756,7 @@
     "capabilities": [
       "vision"
     ],
-    "context_length": 4096,
+    "context_length": 1048576,
     "format": "gguf",
     "gguf_sources": [
       {
@@ -23774,7 +23774,7 @@
     "min_ram_gb": 224.4,
     "min_vram_gb": 205.7,
     "name": "meta-llama/Llama-4-Maverick-17B-128E-Instruct",
-    "num_experts": 16,
+    "num_experts": 128,
     "parameter_count": "401.6B",
     "parameters_raw": 401583781376,
     "pipeline_tag": "image-text-to-text",
@@ -23787,10 +23787,10 @@
   {
     "_discovered": true,
     "active_experts": 1,
-    "active_parameters": 43930451431,
+    "active_parameters": 23063487001,
     "architecture": "llama4",
     "capabilities": [],
-    "context_length": 4096,
+    "context_length": 1048576,
     "format": "gguf",
     "hf_downloads": 68101,
     "hf_likes": 0,
@@ -23798,7 +23798,7 @@
     "min_ram_gb": 224.4,
     "min_vram_gb": 205.7,
     "name": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
-    "num_experts": 16,
+    "num_experts": 128,
     "parameter_count": "401.6B",
     "parameters_raw": 401649841664,
     "pipeline_tag": "unknown",
@@ -23811,7 +23811,7 @@
   {
     "_discovered": true,
     "active_experts": 1,
-    "active_parameters": 43930451431,
+    "active_parameters": 23063487001,
     "architecture": "llama4",
     "capabilities": [],
     "context_length": 1048576,
@@ -23822,7 +23822,7 @@
     "min_ram_gb": 224.4,
     "min_vram_gb": 205.7,
     "name": "RedHatAI/Llama-4-Maverick-17B-128E-Instruct-FP8",
-    "num_experts": 16,
+    "num_experts": 128,
     "parameter_count": "401.6B",
     "parameters_raw": 401649841664,
     "pipeline_tag": "unknown",

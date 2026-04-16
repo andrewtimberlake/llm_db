@@ -33439,9 +33439,9 @@
       "coding-glm-4.7": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.548,
-          "input": 0.27,
-          "output": 1.1
+          "cache_read": 0.01,
+          "input": 0.06,
+          "output": 0.22
         },
         "family": "glm",
         "id": "coding-glm-4.7",
@@ -33596,6 +33596,37 @@
         "reasoning": true,
         "release_date": "2025-09-15",
         "temperature": true,
+        "tool_call": true
+      },
+      "gpt-5.4-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.75,
+          "output": 4.5
+        },
+        "family": "gpt-mini",
+        "id": "gpt-5.4-mini",
+        "last_updated": "2026-03-11",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.4-Mini",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-03-11",
+        "structured_output": true,
+        "temperature": false,
         "tool_call": true
       },
       "gpt-4.1": {
@@ -34322,7 +34353,6 @@
         "reasoning": true,
         "release_date": "2026-01-14",
         "structured_output": true,
-        "temperature": true,
         "tool_call": true
       },
       "qwen3.5-plus": {
@@ -34383,6 +34413,37 @@
         "reasoning": false,
         "release_date": "2025-12-01",
         "tool_call": false
+      },
+      "gpt-5.4": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "input": 2.5,
+          "output": 15
+        },
+        "family": "gpt",
+        "id": "gpt-5.4",
+        "last_updated": "2026-03-11",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.4",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-11",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
       }
     },
     "name": "AIHubMix",
@@ -51675,6 +51736,46 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen3.6-plus": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "cache_write": 0.625,
+          "input": 0.5,
+          "output": 3
+        },
+        "family": "qwen3.6",
+        "id": "qwen3.6-plus",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2026-04-02",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 Plus",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/alibaba"
+        },
+        "reasoning": true,
+        "release_date": "2026-04-02",
+        "status": "deprecated",
+        "temperature": true,
+        "tool_call": true
+      },
       "gpt-5.4-pro": {
         "attachment": true,
         "cost": {
@@ -53161,6 +53262,46 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-08-20",
+        "status": "deprecated",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.5-plus": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.02,
+          "cache_write": 0.25,
+          "input": 0.2,
+          "output": 1.2
+        },
+        "family": "qwen3.5",
+        "id": "qwen3.5-plus",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2026-02-16",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 Plus",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/alibaba"
+        },
+        "reasoning": true,
+        "release_date": "2026-02-16",
         "status": "deprecated",
         "temperature": true,
         "tool_call": true
@@ -64307,6 +64448,86 @@
         },
         "reasoning": true,
         "release_date": "2026-03-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.5-plus": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.02,
+          "cache_write": 0.25,
+          "input": 0.2,
+          "output": 1.2
+        },
+        "family": "qwen3.5",
+        "id": "qwen3.5-plus",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2026-02-16",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 Plus",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/alibaba"
+        },
+        "reasoning": true,
+        "release_date": "2026-02-16",
+        "status": "deprecated",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.6-plus": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "cache_write": 0.625,
+          "input": 0.5,
+          "output": 3
+        },
+        "family": "qwen3.6",
+        "id": "qwen3.6-plus",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2026-04-02",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 Plus",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/alibaba"
+        },
+        "reasoning": true,
+        "release_date": "2026-04-02",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       }
@@ -93942,6 +94163,34 @@
         "reasoning": false,
         "release_date": "2024-04-28",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimaxai/minimax-m2.7": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "family": "minimax",
+        "id": "minimaxai/minimax-m2.7",
+        "last_updated": "2026-04-11",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
         "temperature": true,
         "tool_call": true
       },
