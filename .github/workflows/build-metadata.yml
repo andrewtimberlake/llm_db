@@ -72,6 +72,12 @@ jobs:
           set -euo pipefail
           mix llm_db.build --install
 
+      - name: Validate refreshed catalog before publishing
+        run: |
+          set -euo pipefail
+          mix llm_db.build --check --install
+          mix test
+
       - name: Commit refreshed metadata inputs
         run: |
           set -euo pipefail
@@ -100,14 +106,13 @@ jobs:
           set -euo pipefail
           mix llm_db.history.rebuild --publish
 
-      - name: Validate published catalog
+      - name: Validate published history bundle
         run: |
           set -euo pipefail
-          mix llm_db.build --check --install
           mix llm_db.history.check --allow-missing
-          mix test
 
       - name: Report success
         run: |
           echo "### Snapshot Publish Complete" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Refreshed catalog validated before publishing" >> "$GITHUB_STEP_SUMMARY"
           echo "- Snapshot and history releases updated" >> "$GITHUB_STEP_SUMMARY"

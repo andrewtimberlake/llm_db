@@ -3,6 +3,18 @@ defmodule LLMDB.PackagedTest do
 
   alias LLMDB.Packaged
 
+  @local_cohere_dir Path.expand("../../priv/llm_db/local/cohere", __DIR__)
+  @local_cohere_rerank_model_ids "rerank-*.toml"
+                                 |> then(&Path.join(@local_cohere_dir, &1))
+                                 |> Path.wildcard()
+                                 |> Enum.map(fn path ->
+                                   path
+                                   |> File.read!()
+                                   |> Toml.decode!()
+                                   |> Map.fetch!("id")
+                                 end)
+                                 |> Enum.sort()
+
   describe "snapshot_path/0" do
     test "returns correct snapshot path" do
       path = Packaged.snapshot_path()
@@ -83,22 +95,26 @@ defmodule LLMDB.PackagedTest do
       end
     end
 
-    test "snapshot carries rerank capability metadata for packaged rerank models" do
+    test "snapshot carries rerank capability metadata for packaged local rerank models" do
       snapshot = Packaged.snapshot()
 
       if snapshot do
-        cohere_rerank = snapshot["providers"]["cohere"]["models"]["rerank-v3.5"]
-        berget_rerank = snapshot["providers"]["berget"]["models"]["BAAI/bge-reranker-v2-m3"]
+        assert Enum.any?(@local_cohere_rerank_model_ids)
 
-        cloudflare_rerank =
-          snapshot["providers"]["cloudflare_ai_gateway"]["models"][
-            "workers-ai/@cf/baai/bge-reranker-base"
-          ]
+        cohere_models = snapshot["providers"]["cohere"]["models"]
 
-        assert cohere_rerank["capabilities"]["rerank"] == true
-        assert cohere_rerank["capabilities"]["chat"] == false
-        assert berget_rerank["capabilities"]["rerank"] == true
-        assert cloudflare_rerank["capabilities"]["rerank"] == true
+        for model_id <- @local_cohere_rerank_model_ids do
+          model = cohere_models[model_id]
+
+          assert is_map(model),
+                 "expected local Cohere rerank model #{inspect(model_id)} in packaged snapshot"
+
+          assert model["capabilities"]["rerank"] == true
+          assert model["capabilities"]["chat"] == false
+          assert model["capabilities"]["embeddings"] == false
+          assert model["capabilities"]["streaming"]["text"] == false
+          assert model["execution"] == nil
+        end
       end
     end
   end
