@@ -3,6 +3,123 @@
     {
       "architecture": {
         "input_modalities": [
+          "text"
+        ],
+        "instruct_type": null,
+        "modality": "text->text",
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other"
+      },
+      "canonical_slug": "xiaomi/mimo-v2.5-pro-20260422",
+      "context_length": 1048576,
+      "created": 1776874273,
+      "default_parameters": {
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null,
+        "temperature": 1,
+        "top_k": null,
+        "top_p": 0.95
+      },
+      "description": "MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as ClawEval, GDPVal, and SWE-bench Pro....",
+      "expiration_date": null,
+      "hugging_face_id": null,
+      "id": "xiaomi/mimo-v2.5-pro",
+      "knowledge_cutoff": null,
+      "links": {
+        "details": "/api/v1/models/xiaomi/mimo-v2.5-pro-20260422/endpoints"
+      },
+      "name": "Xiaomi: MiMo-V2.5-Pro",
+      "per_request_limits": null,
+      "pricing": {
+        "completion": "0.000003",
+        "input_cache_read": "0.0000002",
+        "prompt": "0.000001"
+      },
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "response_format",
+        "stop",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "top_provider": {
+        "context_length": 1048576,
+        "is_moderated": false,
+        "max_completion_tokens": 131072
+      }
+    },
+    {
+      "architecture": {
+        "input_modalities": [
+          "text",
+          "audio",
+          "image",
+          "video"
+        ],
+        "instruct_type": null,
+        "modality": "text+image+audio+video->text",
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other"
+      },
+      "canonical_slug": "xiaomi/mimo-v2.5-20260422",
+      "context_length": 1048576,
+      "created": 1776874269,
+      "default_parameters": {
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null,
+        "temperature": 1,
+        "top_k": null,
+        "top_p": 0.95
+      },
+      "description": "MiMo-V2.5 is a native omnimodal model by Xiaomi. It delivers Pro-level agentic performance at roughly half the inference cost, while surpassing MiMo-V2-Omni in multimodal perception across image and video understanding...",
+      "expiration_date": null,
+      "hugging_face_id": null,
+      "id": "xiaomi/mimo-v2.5",
+      "knowledge_cutoff": null,
+      "links": {
+        "details": "/api/v1/models/xiaomi/mimo-v2.5-20260422/endpoints"
+      },
+      "name": "Xiaomi: MiMo-V2.5",
+      "per_request_limits": null,
+      "pricing": {
+        "completion": "0.000002",
+        "input_cache_read": "0.00000008",
+        "prompt": "0.0000004"
+      },
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "response_format",
+        "stop",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "top_provider": {
+        "context_length": 1048576,
+        "is_moderated": false,
+        "max_completion_tokens": 131072
+      }
+    },
+    {
+      "architecture": {
+        "input_modalities": [
           "image",
           "text",
           "file"
@@ -86,7 +203,7 @@
         "top_p": null
       },
       "description": "Ling-2.6-flash is an instant (instruct) model from inclusionAI with 104B total parameters and 7.4B active parameters, designed for real-world agents that require fast responses, strong execution, and high token efficiency....",
-      "expiration_date": null,
+      "expiration_date": "2026-04-29",
       "hugging_face_id": "",
       "id": "inclusionai/ling-2.6-flash:free",
       "knowledge_cutoff": null,
@@ -225,6 +342,62 @@
     {
       "architecture": {
         "input_modalities": [
+          "image",
+          "text"
+        ],
+        "instruct_type": null,
+        "modality": "text+image->text",
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other"
+      },
+      "canonical_slug": "baidu/qianfan-ocr-fast-20260420",
+      "context_length": 65536,
+      "created": 1776707472,
+      "default_parameters": {
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null,
+        "temperature": null,
+        "top_k": null,
+        "top_p": null
+      },
+      "description": "Qianfan-OCR-Fast is a domain-specific multimodal large model purpose-built for OCR. By leveraging specialized OCR training data while preserving versatile multimodal intelligence, it provides a powerful performance upgrade over Qianfan-OCR.",
+      "expiration_date": null,
+      "hugging_face_id": "",
+      "id": "baidu/qianfan-ocr-fast:free",
+      "knowledge_cutoff": null,
+      "links": {
+        "details": "/api/v1/models/baidu/qianfan-ocr-fast-20260420/endpoints"
+      },
+      "name": "Baidu: Qianfan-OCR-Fast (free)",
+      "per_request_limits": null,
+      "pricing": {
+        "completion": "0",
+        "prompt": "0"
+      },
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "seed",
+        "stop",
+        "temperature",
+        "top_p"
+      ],
+      "top_provider": {
+        "context_length": 65536,
+        "is_moderated": false,
+        "max_completion_tokens": 28672
+      }
+    },
+    {
+      "architecture": {
+        "input_modalities": [
           "text",
           "image"
         ],
@@ -258,16 +431,18 @@
       "per_request_limits": null,
       "pricing": {
         "completion": "0.0000035",
-        "input_cache_read": "0.0000002",
-        "prompt": "0.0000008"
+        "input_cache_read": "0.00000015",
+        "prompt": "0.00000075"
       },
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
         "logit_bias",
         "max_tokens",
+        "min_p",
         "presence_penalty",
         "reasoning",
+        "reasoning_effort",
         "repetition_penalty",
         "response_format",
         "seed",
@@ -282,7 +457,7 @@
       "top_provider": {
         "context_length": 262144,
         "is_moderated": false,
-        "max_completion_tokens": 262144
+        "max_completion_tokens": null
       }
     },
     {
@@ -556,8 +731,7 @@
       "name": "Google: Gemma 4 26B A4B ",
       "per_request_limits": null,
       "pricing": {
-        "completion": "0.00000035",
-        "input_cache_read": "0.00000004",
+        "completion": "0.00000034",
         "prompt": "0.00000007"
       },
       "supported_parameters": [
@@ -584,7 +758,7 @@
       "top_provider": {
         "context_length": 262144,
         "is_moderated": false,
-        "max_completion_tokens": 262144
+        "max_completion_tokens": null
       }
     },
     {
@@ -680,7 +854,6 @@
       "per_request_limits": null,
       "pricing": {
         "completion": "0.00000038",
-        "input_cache_read": "0.0000000199999995",
         "prompt": "0.00000013"
       },
       "supported_parameters": [
@@ -3179,7 +3352,6 @@
         "logprobs",
         "max_tokens",
         "min_p",
-        "parallel_tool_calls",
         "presence_penalty",
         "reasoning",
         "repetition_penalty",
@@ -3473,7 +3645,6 @@
         "min_p",
         "presence_penalty",
         "reasoning",
-        "reasoning_effort",
         "repetition_penalty",
         "response_format",
         "seed",
@@ -3514,18 +3685,18 @@
         "top_p": 0.8
       },
       "description": "Trinity-Large-Preview is a frontier-scale open-weight language model from Arcee, built as a 400B-parameter sparse Mixture-of-Experts with 13B active parameters per token using 4-of-256 expert routing. It excels in creative writing,...",
-      "expiration_date": "2026-04-22",
+      "expiration_date": null,
       "hugging_face_id": "arcee-ai/Trinity-Large-Preview",
-      "id": "arcee-ai/trinity-large-preview:free",
+      "id": "arcee-ai/trinity-large-preview",
       "knowledge_cutoff": null,
       "links": {
         "details": "/api/v1/models/arcee-ai/trinity-large-preview/endpoints"
       },
-      "name": "Arcee AI: Trinity Large Preview (free)",
+      "name": "Arcee AI: Trinity Large Preview",
       "per_request_limits": null,
       "pricing": {
-        "completion": "0",
-        "prompt": "0"
+        "completion": "0.00000045",
+        "prompt": "0.00000015"
       },
       "supported_parameters": [
         "max_tokens",
@@ -4525,9 +4696,7 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logit_bias",
         "max_tokens",
-        "min_p",
         "presence_penalty",
         "reasoning",
         "repetition_penalty",
@@ -5502,6 +5671,7 @@
       },
       "supported_parameters": [
         "include_reasoning",
+        "max_completion_tokens",
         "max_tokens",
         "reasoning",
         "response_format",
@@ -5621,7 +5791,6 @@
         "logprobs",
         "max_tokens",
         "min_p",
-        "parallel_tool_calls",
         "presence_penalty",
         "reasoning",
         "repetition_penalty",
@@ -5639,7 +5808,7 @@
       "top_provider": {
         "context_length": 131072,
         "is_moderated": false,
-        "max_completion_tokens": 32768
+        "max_completion_tokens": 65536
       }
     },
     {
@@ -5932,62 +6101,6 @@
         "context_length": 2000000,
         "is_moderated": false,
         "max_completion_tokens": 30000
-      }
-    },
-    {
-      "architecture": {
-        "input_modalities": [
-          "text"
-        ],
-        "instruct_type": null,
-        "modality": "text->text",
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other"
-      },
-      "canonical_slug": "deepcogito/cogito-v2.1-671b-20251118",
-      "context_length": 128000,
-      "created": 1763071233,
-      "default_parameters": {
-        "frequency_penalty": null,
-        "temperature": null,
-        "top_p": null
-      },
-      "description": "Cogito v2.1 671B MoE represents one of the strongest open models globally, matching performance of frontier closed and open models. This model is trained using self play with reinforcement learning...",
-      "expiration_date": null,
-      "hugging_face_id": "",
-      "id": "deepcogito/cogito-v2.1-671b",
-      "knowledge_cutoff": null,
-      "links": {
-        "details": "/api/v1/models/deepcogito/cogito-v2.1-671b-20251118/endpoints"
-      },
-      "name": "Deep Cogito: Cogito v2.1 671B",
-      "per_request_limits": null,
-      "pricing": {
-        "completion": "0.00000125",
-        "prompt": "0.00000125"
-      },
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "reasoning",
-        "repetition_penalty",
-        "response_format",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "top_provider": {
-        "context_length": 128000,
-        "is_moderated": false,
-        "max_completion_tokens": null
       }
     },
     {
@@ -7901,7 +8014,6 @@
         "response_format",
         "seed",
         "stop",
-        "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
@@ -10206,7 +10318,7 @@
         "tokenizer": "Qwen3"
       },
       "canonical_slug": "qwen/qwen3-235b-a22b-thinking-2507",
-      "context_length": 262144,
+      "context_length": 131072,
       "created": 1753449557,
       "default_parameters": {
         "frequency_penalty": null,
@@ -10224,8 +10336,8 @@
       "name": "Qwen: Qwen3 235B A22B Thinking 2507",
       "per_request_limits": null,
       "pricing": {
-        "completion": "0.0000006",
-        "prompt": "0.00000013"
+        "completion": "0.000001495",
+        "prompt": "0.0000001495"
       },
       "supported_parameters": [
         "frequency_penalty",
@@ -10247,9 +10359,9 @@
         "top_p"
       ],
       "top_provider": {
-        "context_length": 262144,
+        "context_length": 131072,
         "is_moderated": false,
-        "max_completion_tokens": 262144
+        "max_completion_tokens": null
       }
     },
     {
@@ -11193,10 +11305,8 @@
         "max_tokens",
         "presence_penalty",
         "repetition_penalty",
-        "response_format",
         "seed",
         "stop",
-        "structured_outputs",
         "temperature",
         "top_k",
         "top_p"
@@ -13989,7 +14099,7 @@
       "created": 1741208814,
       "default_parameters": {},
       "description": "QwQ is the reasoning model of the Qwen series. Compared with conventional instruction-tuned models, QwQ, which is capable of thinking and reasoning, can achieve significantly enhanced performance in downstream tasks,...",
-      "expiration_date": null,
+      "expiration_date": "2026-04-29",
       "hugging_face_id": "Qwen/QwQ-32B",
       "id": "qwen/qwq-32b",
       "knowledge_cutoff": "2024-06-30",
@@ -14361,7 +14471,7 @@
         "tokenizer": "Gemini"
       },
       "canonical_slug": "google/gemini-2.0-flash-001",
-      "context_length": 1000000,
+      "context_length": 1048576,
       "created": 1738769413,
       "default_parameters": {
         "frequency_penalty": null,
@@ -14400,7 +14510,7 @@
         "top_p"
       ],
       "top_provider": {
-        "context_length": 1000000,
+        "context_length": 1048576,
         "is_moderated": false,
         "max_completion_tokens": 8192
       }
@@ -14967,7 +15077,9 @@
         "max_tokens",
         "presence_penalty",
         "reasoning",
+        "repetition_penalty",
         "response_format",
+        "seed",
         "stop",
         "structured_outputs",
         "temperature",
@@ -17334,7 +17446,9 @@
         "frequency_penalty",
         "max_tokens",
         "presence_penalty",
+        "repetition_penalty",
         "response_format",
+        "seed",
         "stop",
         "structured_outputs",
         "temperature",
