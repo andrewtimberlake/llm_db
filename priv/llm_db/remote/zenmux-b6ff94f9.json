@@ -47,7 +47,7 @@
             "conditions": {
               "prompt_tokens": {
                 "gte": 0,
-                "lte": 128,
+                "lt": 128,
                 "unit": "kTokens"
               }
             },
@@ -58,13 +58,36 @@
           {
             "conditions": {
               "prompt_tokens": {
-                "gt": 128,
+                "gte": 128,
                 "unit": "kTokens"
               }
             },
             "currency": "USD",
             "unit": "perMTokens",
             "value": 0.2
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gt": 0,
+                "lte": 128,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.26
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gt": 128,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.4
           }
         ],
         "input_cache_write": [
@@ -1178,7 +1201,7 @@
           {
             "conditions": {
               "prompt_tokens": {
-                "gte": 0,
+                "gt": 0,
                 "lte": 256,
                 "unit": "kTokens"
               }
@@ -1190,6 +1213,18 @@
           {
             "conditions": {
               "prompt_tokens": {
+                "gt": 0,
+                "lte": 256,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.1
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
                 "gt": 256,
                 "unit": "kTokens"
               }
@@ -1197,6 +1232,17 @@
             "currency": "USD",
             "unit": "perMTokens",
             "value": 0.2
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gt": 256,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.4
           }
         ],
         "input_cache_write": [
@@ -2520,7 +2566,7 @@
           {
             "conditions": {
               "prompt_tokens": {
-                "gte": 0,
+                "gt": 0,
                 "lte": 256,
                 "unit": "kTokens"
               }
@@ -2532,6 +2578,18 @@
           {
             "conditions": {
               "prompt_tokens": {
+                "gt": 0,
+                "lte": 256,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.05
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
                 "gt": 256,
                 "unit": "kTokens"
               }
@@ -2539,6 +2597,17 @@
             "currency": "USD",
             "unit": "perMTokens",
             "value": 0.1
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gt": 256,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.2
           }
         ],
         "input_cache_write": [
@@ -2817,14 +2886,14 @@
             },
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 7.2
+            "value": 3
           }
         ],
         "input_cache_read": [
           {
             "conditions": {
               "prompt_tokens": {
-                "gte": 0,
+                "gt": 0,
                 "lte": 256,
                 "unit": "kTokens"
               }
@@ -2842,7 +2911,30 @@
             },
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 0.12
+            "value": 0.05
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gt": 0,
+                "lte": 256,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.08
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gt": 256,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.1
           }
         ],
         "input_cache_write": [
@@ -2867,7 +2959,7 @@
             },
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 1.5
+            "value": 0.625
           }
         ],
         "prompt": [
@@ -2892,7 +2984,7 @@
             },
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 1.2
+            "value": 0.5
           }
         ],
         "web_search": [
@@ -3907,7 +3999,7 @@
           {
             "conditions": {
               "prompt_tokens": {
-                "gte": 0,
+                "gt": 0,
                 "lte": 32,
                 "unit": "kTokens"
               }
@@ -3915,6 +4007,18 @@
             "currency": "USD",
             "unit": "perMTokens",
             "value": 0.12
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gt": 0,
+                "lte": 32,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.24
           },
           {
             "conditions": {
@@ -3938,6 +4042,29 @@
             "currency": "USD",
             "unit": "perMTokens",
             "value": 0.3
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gt": 32,
+                "lte": 128,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.48
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gt": 128,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.6
           }
         ],
         "input_cache_write": [
@@ -3974,7 +4101,7 @@
             },
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 3.45
+            "value": 3.75
           }
         ],
         "prompt": [
@@ -6677,7 +6804,31 @@
           {
             "conditions": {
               "prompt_tokens": {
-                "gte": 0,
+                "gt": 0,
+                "lte": 32,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.02
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gt": 32,
+                "lte": 128,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.03
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gt": 0,
                 "lte": 32,
                 "unit": "kTokens"
               }
@@ -6691,6 +6842,17 @@
               "prompt_tokens": {
                 "gt": 32,
                 "lte": 128,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.06
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gt": 128,
                 "unit": "kTokens"
               }
             },
@@ -8143,7 +8305,7 @@
           {
             "conditions": {
               "prompt_tokens": {
-                "gte": 0,
+                "gt": 0,
                 "lte": 32,
                 "unit": "kTokens"
               }
@@ -8167,6 +8329,18 @@
           {
             "conditions": {
               "prompt_tokens": {
+                "gte": 0,
+                "lt": 32,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.2
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
                 "gt": 128,
                 "lte": 256,
                 "unit": "kTokens"
@@ -8179,6 +8353,30 @@
           {
             "conditions": {
               "prompt_tokens": {
+                "gte": 32,
+                "lt": 128,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.36
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gte": 128,
+                "lt": 256,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.6
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
                 "gt": 256,
                 "unit": "kTokens"
               }
@@ -8186,6 +8384,17 @@
             "currency": "USD",
             "unit": "perMTokens",
             "value": 0.6
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gte": 256,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 1.2
           }
         ],
         "input_cache_write": [
