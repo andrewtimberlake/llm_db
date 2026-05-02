@@ -1006,7 +1006,7 @@
         "tokenizer": "Qwen3"
       },
       "canonical_slug": "qwen/qwen3.6-27b-20260422",
-      "context_length": 256000,
+      "context_length": 262144,
       "created": 1777255064,
       "default_parameters": {
         "frequency_penalty": null,
@@ -1027,8 +1027,8 @@
       "name": "Qwen: Qwen3.6 27B",
       "per_request_limits": null,
       "pricing": {
-        "completion": "0.00000325",
-        "prompt": "0.000000325"
+        "completion": "0.0000032",
+        "prompt": "0.00000032"
       },
       "supported_parameters": [
         "frequency_penalty",
@@ -1052,9 +1052,9 @@
         "top_p"
       ],
       "top_provider": {
-        "context_length": 256000,
+        "context_length": 262144,
         "is_moderated": false,
-        "max_completion_tokens": 65536
+        "max_completion_tokens": 81920
       }
     },
     {
@@ -15887,7 +15887,7 @@
         "tokenizer": "Gemini"
       },
       "canonical_slug": "google/gemini-2.0-flash-001",
-      "context_length": 1000000,
+      "context_length": 1048576,
       "created": 1738769413,
       "default_parameters": {
         "frequency_penalty": null,
@@ -15926,7 +15926,7 @@
         "top_p"
       ],
       "top_provider": {
-        "context_length": 1000000,
+        "context_length": 1048576,
         "is_moderated": false,
         "max_completion_tokens": 8192
       }

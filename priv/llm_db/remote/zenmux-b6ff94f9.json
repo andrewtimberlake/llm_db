@@ -2,6 +2,108 @@
   "data": [
     {
       "capabilities": {
+        "reasoning": false
+      },
+      "context_length": 1000000,
+      "created": 1777645558,
+      "display_name": "xAI: Grok 4.3",
+      "id": "x-ai/grok-4.3",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "object": "model",
+      "output_modalities": [
+        "text"
+      ],
+      "owned_by": "x-ai",
+      "pricings": {
+        "completion": [
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gte": 0,
+                "lt": 200,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 2.5
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gte": 200,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 5
+          }
+        ],
+        "input_cache_read": [
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gte": 0,
+                "lt": 200,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.2
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gte": 200,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.4
+          }
+        ],
+        "prompt": [
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gte": 0,
+                "lt": 200,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 1.25
+          },
+          {
+            "conditions": {
+              "prompt_tokens": {
+                "gte": 200,
+                "unit": "kTokens"
+              }
+            },
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 2.5
+          }
+        ],
+        "web_search": [
+          {
+            "currency": "USD",
+            "unit": "perCount",
+            "value": 0.005
+          }
+        ]
+      }
+    },
+    {
+      "capabilities": {
         "reasoning": true
       },
       "context_length": 262144,
@@ -326,86 +428,6 @@
             "currency": "USD",
             "unit": "perCount",
             "value": 0.01
-          }
-        ]
-      }
-    },
-    {
-      "capabilities": {
-        "reasoning": true
-      },
-      "context_length": 1000000,
-      "created": 1777003681,
-      "display_name": "DeepSeek: DeepSeek V4 Pro (Free)",
-      "id": "deepseek/deepseek-v4-pro-free",
-      "input_modalities": [
-        "text"
-      ],
-      "object": "model",
-      "output_modalities": [
-        "text"
-      ],
-      "owned_by": "deepseek",
-      "pricings": {
-        "completion": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0
-          }
-        ],
-        "input_cache_read": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0
-          }
-        ],
-        "prompt": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0
-          }
-        ]
-      }
-    },
-    {
-      "capabilities": {
-        "reasoning": true
-      },
-      "context_length": 1000000,
-      "created": 1777003313,
-      "display_name": "DeepSeek: DeepSeek V4 Flash (Free)",
-      "id": "deepseek/deepseek-v4-flash-free",
-      "input_modalities": [
-        "text"
-      ],
-      "object": "model",
-      "output_modalities": [
-        "text"
-      ],
-      "owned_by": "deepseek",
-      "pricings": {
-        "completion": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0
-          }
-        ],
-        "input_cache_read": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0
-          }
-        ],
-        "prompt": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0
           }
         ]
       }
