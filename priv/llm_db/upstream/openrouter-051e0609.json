@@ -15887,7 +15887,7 @@
         "tokenizer": "Gemini"
       },
       "canonical_slug": "google/gemini-2.0-flash-001",
-      "context_length": 1048576,
+      "context_length": 1000000,
       "created": 1738769413,
       "default_parameters": {
         "frequency_penalty": null,
@@ -15926,7 +15926,7 @@
         "top_p"
       ],
       "top_provider": {
-        "context_length": 1048576,
+        "context_length": 1000000,
         "is_moderated": false,
         "max_completion_tokens": 8192
       }
