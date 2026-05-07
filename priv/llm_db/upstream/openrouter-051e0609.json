@@ -711,7 +711,7 @@
         "tokenizer": "Router"
       },
       "canonical_slug": "~moonshotai/kimi-latest",
-      "context_length": 262142,
+      "context_length": 262144,
       "created": 1777318428,
       "default_parameters": {
         "frequency_penalty": null,
@@ -732,9 +732,9 @@
       "name": "MoonshotAI Kimi Latest",
       "per_request_limits": null,
       "pricing": {
-        "completion": "0.00000349",
-        "input_cache_read": "0.00000014",
-        "prompt": "0.00000074"
+        "completion": "0.0000035",
+        "input_cache_read": "0.00000015",
+        "prompt": "0.00000075"
       },
       "supported_parameters": [
         "frequency_penalty",
@@ -761,9 +761,9 @@
       ],
       "supported_voices": null,
       "top_provider": {
-        "context_length": 262142,
+        "context_length": 262144,
         "is_moderated": false,
-        "max_completion_tokens": 262142
+        "max_completion_tokens": 16384
       }
     },
     {
@@ -1574,7 +1574,7 @@
         "top_p": 1
       },
       "description": "Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes, allowing it to...",
-      "expiration_date": "2026-05-08",
+      "expiration_date": null,
       "hugging_face_id": "tencent/Hy3-preview",
       "id": "tencent/hy3-preview:free",
       "knowledge_cutoff": null,
@@ -2024,7 +2024,7 @@
         "tokenizer": "Other"
       },
       "canonical_slug": "moonshotai/kimi-k2.6-20260420",
-      "context_length": 262142,
+      "context_length": 262144,
       "created": 1776699402,
       "default_parameters": {
         "frequency_penalty": null,
@@ -2045,9 +2045,9 @@
       "name": "MoonshotAI: Kimi K2.6",
       "per_request_limits": null,
       "pricing": {
-        "completion": "0.00000349",
-        "input_cache_read": "0.00000014",
-        "prompt": "0.00000074"
+        "completion": "0.0000035",
+        "input_cache_read": "0.00000015",
+        "prompt": "0.00000075"
       },
       "supported_parameters": [
         "frequency_penalty",
@@ -2074,9 +2074,9 @@
       ],
       "supported_voices": null,
       "top_provider": {
-        "context_length": 262142,
+        "context_length": 262144,
         "is_moderated": false,
-        "max_completion_tokens": 262142
+        "max_completion_tokens": 16384
       }
     },
     {
@@ -3206,6 +3206,7 @@
         "reasoning",
         "repetition_penalty",
         "response_format",
+        "seed",
         "stop",
         "structured_outputs",
         "temperature",
@@ -5198,7 +5199,7 @@
       "pricing": {
         "completion": "0.0000008",
         "input_cache_read": "0.00000007",
-        "prompt": "0.00000012"
+        "prompt": "0.00000011"
       },
       "supported_parameters": [
         "frequency_penalty",
@@ -5955,64 +5956,6 @@
         "context_length": 400000,
         "is_moderated": false,
         "max_completion_tokens": 128000
-      }
-    },
-    {
-      "architecture": {
-        "input_modalities": [
-          "text"
-        ],
-        "instruct_type": null,
-        "modality": "text->text",
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other"
-      },
-      "canonical_slug": "allenai/olmo-3.1-32b-instruct-20251215",
-      "context_length": 65536,
-      "created": 1767728554,
-      "default_parameters": {
-        "frequency_penalty": null,
-        "temperature": 0.6,
-        "top_p": 0.95
-      },
-      "description": "Olmo 3.1 32B Instruct is a large-scale, 32-billion-parameter instruction-tuned language model engineered for high-performance conversational AI, multi-turn dialogue, and practical instruction following. As part of the Olmo 3.1 family, this...",
-      "expiration_date": "2026-05-07",
-      "hugging_face_id": "allenai/Olmo-3.1-32B-Instruct",
-      "id": "allenai/olmo-3.1-32b-instruct",
-      "knowledge_cutoff": null,
-      "links": {
-        "details": "/api/v1/models/allenai/olmo-3.1-32b-instruct-20251215/endpoints"
-      },
-      "name": "AllenAI: Olmo 3.1 32B Instruct",
-      "per_request_limits": null,
-      "pricing": {
-        "completion": "0.0000006",
-        "prompt": "0.0000002"
-      },
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_p"
-      ],
-      "supported_voices": null,
-      "top_provider": {
-        "context_length": 65536,
-        "is_moderated": false,
-        "max_completion_tokens": 16384
       }
     },
     {
@@ -7397,9 +7340,9 @@
       "name": "DeepSeek: DeepSeek V3.2 Speciale",
       "per_request_limits": null,
       "pricing": {
-        "completion": "0.0000012",
-        "input_cache_read": "0.0000002",
-        "prompt": "0.0000004"
+        "completion": "0.000000431",
+        "input_cache_read": "0.000000058",
+        "prompt": "0.000000287"
       },
       "supported_parameters": [
         "frequency_penalty",
@@ -7750,7 +7693,7 @@
         "top_p": 0.95
       },
       "description": "Grok 4.1 Fast is xAI's best agentic tool calling model that shines in real-world use cases like customer support and deep research. 2M context window. Reasoning can be enabled/disabled using...",
-      "expiration_date": "2026-06-01",
+      "expiration_date": "2026-05-15",
       "hugging_face_id": "",
       "id": "x-ai/grok-4.1-fast",
       "knowledge_cutoff": null,
@@ -8398,65 +8341,6 @@
         "context_length": 128000,
         "is_moderated": false,
         "max_completion_tokens": 128000
-      }
-    },
-    {
-      "architecture": {
-        "input_modalities": [
-          "image",
-          "text",
-          "video"
-        ],
-        "instruct_type": null,
-        "modality": "text+image+video->text",
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other"
-      },
-      "canonical_slug": "nvidia/nemotron-nano-12b-v2-vl",
-      "context_length": 131072,
-      "created": 1761675565,
-      "default_parameters": {
-        "frequency_penalty": null,
-        "temperature": null,
-        "top_p": null
-      },
-      "description": "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning model designed for video understanding and document intelligence. It introduces a hybrid Transformer-Mamba architecture, combining transformer-level accuracy with Mamba’s...",
-      "expiration_date": "2026-05-07",
-      "hugging_face_id": "nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16",
-      "id": "nvidia/nemotron-nano-12b-v2-vl",
-      "knowledge_cutoff": null,
-      "links": {
-        "details": "/api/v1/models/nvidia/nemotron-nano-12b-v2-vl/endpoints"
-      },
-      "name": "NVIDIA: Nemotron Nano 12B 2 VL",
-      "per_request_limits": null,
-      "pricing": {
-        "completion": "0.0000006",
-        "prompt": "0.0000002"
-      },
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "reasoning",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "supported_voices": null,
-      "top_provider": {
-        "context_length": 131072,
-        "is_moderated": false,
-        "max_completion_tokens": 16384
       }
     },
     {
@@ -10170,7 +10054,7 @@
         "top_p": null
       },
       "description": "Grok 4 Fast is xAI's latest multimodal model with SOTA cost-efficiency and a 2M token context window. It comes in two flavors: non-reasoning and reasoning. Read more about the model...",
-      "expiration_date": "2026-06-01",
+      "expiration_date": "2026-05-15",
       "hugging_face_id": "",
       "id": "x-ai/grok-4-fast",
       "knowledge_cutoff": "2025-09-30",
@@ -10839,7 +10723,7 @@
         "top_p": null
       },
       "description": "Grok Code Fast 1 is a speedy and economical reasoning model that excels at agentic coding. With reasoning traces visible in the response, developers can steer Grok Code for high-quality...",
-      "expiration_date": "2026-06-01",
+      "expiration_date": "2026-05-15",
       "hugging_face_id": "",
       "id": "x-ai/grok-code-fast-1",
       "knowledge_cutoff": "2025-09-30",
@@ -12849,7 +12733,7 @@
         "top_p": null
       },
       "description": "Grok 4 is xAI's latest reasoning model with a 256k context window. It supports parallel tool calling, structured outputs, and both image and text inputs. Note that reasoning is not...",
-      "expiration_date": "2026-06-01",
+      "expiration_date": "2026-05-15",
       "hugging_face_id": "",
       "id": "x-ai/grok-4",
       "knowledge_cutoff": "2025-07-31",
@@ -13495,7 +13379,7 @@
         "top_p": null
       },
       "description": "A lightweight model that thinks before responding. Fast, smart, and great for logic-based tasks that do not require deep domain knowledge. The raw thinking traces are accessible.",
-      "expiration_date": "2026-06-01",
+      "expiration_date": "2026-05-15",
       "hugging_face_id": "",
       "id": "x-ai/grok-3-mini",
       "knowledge_cutoff": "2025-02-28",
@@ -13549,7 +13433,7 @@
       "created": 1749582908,
       "default_parameters": {},
       "description": "Grok 3 is the latest model from xAI. It's their flagship model that excels at enterprise use cases like data extraction, coding, and text summarization. Possesses deep domain knowledge in...",
-      "expiration_date": "2026-06-01",
+      "expiration_date": "2026-05-15",
       "hugging_face_id": "",
       "id": "x-ai/grok-3",
       "knowledge_cutoff": "2025-02-28",
@@ -14916,7 +14800,7 @@
         "top_p": null
       },
       "description": "Grok 3 Mini is a lightweight, smaller thinking model. Unlike traditional models that generate answers immediately, Grok 3 Mini thinks before responding. It’s ideal for reasoning-heavy tasks that don’t demand...",
-      "expiration_date": "2026-06-01",
+      "expiration_date": "2026-05-15",
       "hugging_face_id": "",
       "id": "x-ai/grok-3-mini-beta",
       "knowledge_cutoff": "2025-02-28",
@@ -14969,7 +14853,7 @@
       "created": 1744240068,
       "default_parameters": {},
       "description": "Grok 3 is the latest model from xAI. It's their flagship model that excels at enterprise use cases like data extraction, coding, and text summarization. Possesses deep domain knowledge in...",
-      "expiration_date": "2026-06-01",
+      "expiration_date": "2026-05-15",
       "hugging_face_id": "",
       "id": "x-ai/grok-3-beta",
       "knowledge_cutoff": "2025-02-28",
@@ -18071,7 +17955,7 @@
       "created": 1728950400,
       "default_parameters": {},
       "description": "NVIDIA's Llama 3.1 Nemotron 70B is a language model designed for generating precise and useful responses. Leveraging [Llama 3.1 70B](/models/meta-llama/llama-3.1-70b-instruct) architecture and Reinforcement Learning from Human Feedback (RLHF), it excels...",
-      "expiration_date": "2026-05-08",
+      "expiration_date": "2026-05-07",
       "hugging_face_id": "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
       "id": "nvidia/llama-3.1-nemotron-70b-instruct",
       "knowledge_cutoff": "2023-12-31",
@@ -19474,7 +19358,7 @@
       "created": 1713398400,
       "default_parameters": {},
       "description": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong...",
-      "expiration_date": "2026-05-07",
+      "expiration_date": null,
       "hugging_face_id": "meta-llama/Meta-Llama-3-8B-Instruct",
       "id": "meta-llama/llama-3-8b-instruct",
       "knowledge_cutoff": "2023-12-31",
@@ -19485,7 +19369,7 @@
       "per_request_limits": null,
       "pricing": {
         "completion": "0.00000004",
-        "prompt": "0.00000003"
+        "prompt": "0.00000004"
       },
       "supported_parameters": [
         "frequency_penalty",
@@ -19494,12 +19378,9 @@
         "min_p",
         "presence_penalty",
         "repetition_penalty",
-        "response_format",
         "seed",
         "stop",
         "temperature",
-        "tool_choice",
-        "tools",
         "top_k",
         "top_p"
       ],
@@ -19507,7 +19388,7 @@
       "top_provider": {
         "context_length": 8192,
         "is_moderated": false,
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 8192
       }
     },
     {
@@ -19940,7 +19821,7 @@
         "temperature": 0.3
       },
       "description": "Mixtral 8x7B Instruct is a pretrained generative Sparse Mixture of Experts, by Mistral AI, for chat and instruction use. Incorporates 8 experts (feed-forward networks) for a total of 47 billion...",
-      "expiration_date": "2026-05-08",
+      "expiration_date": "2026-05-07",
       "hugging_face_id": "mistralai/Mixtral-8x7B-Instruct-v0.1",
       "id": "mistralai/mixtral-8x7b-instruct",
       "knowledge_cutoff": "2023-12-31",
@@ -20226,7 +20107,7 @@
         "temperature": 0.3
       },
       "description": "A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks, with optimizations for speed and context length.",
-      "expiration_date": null,
+      "expiration_date": "2026-05-30",
       "hugging_face_id": "mistralai/Mistral-7B-Instruct-v0.1",
       "id": "mistralai/mistral-7b-instruct-v0.1",
       "knowledge_cutoff": "2023-09-30",

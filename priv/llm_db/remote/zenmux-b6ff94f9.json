@@ -4,6 +4,55 @@
       "capabilities": {
         "reasoning": false
       },
+      "context_length": 400000,
+      "created": 1778037688,
+      "display_name": "OpenAI: Chat Latest (GPT-5.5 Instant)",
+      "id": "openai/chat-latest",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "object": "model",
+      "output_modalities": [
+        "text"
+      ],
+      "owned_by": "openai",
+      "pricings": {
+        "completion": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 30
+          }
+        ],
+        "input_cache_read": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.5
+          }
+        ],
+        "prompt": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 5
+          }
+        ],
+        "web_search": [
+          {
+            "currency": "USD",
+            "unit": "perCount",
+            "value": 0.01
+          }
+        ]
+      }
+    },
+    {
+      "capabilities": {
+        "reasoning": false
+      },
       "context_length": 1000000,
       "created": 1777645558,
       "display_name": "xAI: Grok 4.3",
