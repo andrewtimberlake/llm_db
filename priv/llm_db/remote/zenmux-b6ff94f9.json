@@ -4,6 +4,46 @@
       "capabilities": {
         "reasoning": true
       },
+      "context_length": 262144,
+      "created": 1778304211,
+      "display_name": "inclusionAI: Ring-2.6-1T",
+      "id": "inclusionai/ring-2.6-1t",
+      "input_modalities": [
+        "text"
+      ],
+      "object": "model",
+      "output_modalities": [
+        "text"
+      ],
+      "owned_by": "inclusionai",
+      "pricings": {
+        "completion": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0
+          }
+        ],
+        "input_cache_read": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0
+          }
+        ],
+        "prompt": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "capabilities": {
+        "reasoning": true
+      },
       "context_length": 1048576,
       "created": 1778295398,
       "display_name": "Google: Gemini 3.1 Flash Lite",
@@ -9754,23 +9794,6 @@
           }
         ]
       }
-    },
-    {
-      "capabilities": {},
-      "context_length": 200000,
-      "created": 1755152713,
-      "display_name": "Anthropic: Claude 3.7 Sonnet",
-      "id": "anthropic/claude-3.7-sonnet",
-      "input_modalities": [
-        "text",
-        "image",
-        "file"
-      ],
-      "object": "model",
-      "output_modalities": [
-        "text"
-      ],
-      "owned_by": "anthropic"
     },
     {
       "capabilities": {
