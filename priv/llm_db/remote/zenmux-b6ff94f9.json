@@ -21,21 +21,21 @@
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 0
+            "value": 2.5
           }
         ],
         "input_cache_read": [
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 0
+            "value": 0.06
           }
         ],
         "prompt": [
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 0
+            "value": 0.3
           }
         ]
       }
