@@ -193,6 +193,7 @@ The packaged snapshot loads automatically at app start. Optional runtime filters
 # config/runtime.exs
 config :llm_db,
   load_dotenv: true,                  # set false to skip .env loading
+  dotenv_override: false,             # set true to let .env override existing env vars
   filter: %{
     allow: :all,                     # :all or %{provider => [patterns]}
     deny: %{openai: ["*-preview"]}   # deny patterns override allow
@@ -210,7 +211,7 @@ config :llm_db,
   }
 ```
 
-**`.env` loading:** When `load_dotenv` is `true` (the default), LLM DB loads variables from a `.env` file at application start. Environment variables already set by the OS, shell, or tools like `direnv` are never overwritten. Set `load_dotenv: false` to skip `.env` loading entirely.
+**`.env` loading:** When `load_dotenv` is `true` (the default), LLM DB loads variables from a `.env` file at application start. Environment variables already set by the OS, shell, or tools like `direnv` are not overwritten unless `dotenv_override: true` is set. Set `load_dotenv: false` to skip `.env` loading entirely. Maintainer metadata pulls load the repo-local `.env` with override enabled so stale global API keys do not shadow local refresh credentials.
 
 ### Filter Examples
 

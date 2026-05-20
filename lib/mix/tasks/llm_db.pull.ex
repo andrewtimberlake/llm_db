@@ -127,7 +127,7 @@ defmodule Mix.Tasks.LlmDb.Pull do
     # Load runtime.exs before consulting :load_dotenv so runtime configuration
     # can disable dotenv loading for this task.
     Mix.Task.run("app.config")
-    LLMDB.Dotenv.load!()
+    LLMDB.Dotenv.load!(override: true)
   end
 
   # Pull from all sources and return list of {module, result} tuples

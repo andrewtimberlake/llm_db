@@ -36,6 +36,27 @@ defmodule LLMDB.DotenvTest do
     end
   end
 
+  test "overwrites existing env vars when override is enabled" do
+    env_path =
+      write_temp_env("""
+      LLMDB_DOTENV_EXISTING=from_dotenv
+      LLMDB_DOTENV_LOADED=from_dotenv
+      """)
+
+    try do
+      Application.put_env(:llm_db, :load_dotenv, true)
+      System.put_env("LLMDB_DOTENV_EXISTING", "from_shell")
+      System.delete_env("LLMDB_DOTENV_LOADED")
+
+      LLMDB.Dotenv.load!(path: env_path, override: true)
+
+      assert System.get_env("LLMDB_DOTENV_EXISTING") == "from_dotenv"
+      assert System.get_env("LLMDB_DOTENV_LOADED") == "from_dotenv"
+    after
+      File.rm(env_path)
+    end
+  end
+
   test "raises when .env contents are malformed" do
     env_path = write_temp_env("BROKEN=${\n")
 
