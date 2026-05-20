@@ -9,6 +9,17 @@ LLM model metadata catalog with fast, capability-aware lookups. Use simple `"pro
 - **Fast O(1) reads** via `:persistent_term`
 - **Minimal dependencies** 
 
+## Why?
+
+LLM model metadata changes constantly. Providers launch new models, rename aliases,
+retire previews, change pricing, add modalities, and expose new runtime
+capabilities without waiting for downstream libraries to catch up.
+
+LLM DB gives that moving catalog a refreshable snapshot pattern: pull upstream
+metadata, validate and normalize it, package it into releases, and let consumers
+query a stable local database at runtime. The site at [llmdb.xyz](https://llmdb.xyz)
+showcases the live catalog and makes those ongoing changes easier to inspect.
+
 ## Runtime Metadata Contract
 
 `LLMDB` now distinguishes between descriptive catalog metadata and typed execution
