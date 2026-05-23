@@ -1468,9 +1468,9 @@
       "name": "Qwen: Qwen3.6 Flash",
       "per_request_limits": null,
       "pricing": {
-        "completion": "0.0000007425",
-        "input_cache_write": "0.0000001545",
-        "prompt": "0.00000012375"
+        "completion": "0.000001125",
+        "input_cache_write": "0.000000234375",
+        "prompt": "0.0000001875"
       },
       "supported_parameters": [
         "include_reasoning",
@@ -1526,7 +1526,6 @@
       "per_request_limits": null,
       "pricing": {
         "completion": "0.000001",
-        "input_cache_read": "0.00000005",
         "prompt": "0.00000015"
       },
       "supported_parameters": [
@@ -1552,9 +1551,9 @@
       ],
       "supported_voices": null,
       "top_provider": {
-        "context_length": 262144,
+        "context_length": 262140,
         "is_moderated": false,
-        "max_completion_tokens": 262144
+        "max_completion_tokens": 262140
       }
     },
     {
@@ -1943,9 +1942,9 @@
       "name": "DeepSeek: DeepSeek V4 Flash",
       "per_request_limits": null,
       "pricing": {
-        "completion": "0.000000224",
-        "input_cache_read": "0.000000022",
-        "prompt": "0.000000112"
+        "completion": "0.0000002",
+        "input_cache_read": "0.00000002",
+        "prompt": "0.0000001"
       },
       "supported_parameters": [
         "frequency_penalty",
@@ -1970,9 +1969,9 @@
       ],
       "supported_voices": null,
       "top_provider": {
-        "context_length": 1048575,
+        "context_length": 1048576,
         "is_moderated": false,
-        "max_completion_tokens": null
+        "max_completion_tokens": 16384
       }
     },
     {
@@ -3040,9 +3039,9 @@
       "name": "Qwen: Qwen3.6 Plus",
       "per_request_limits": null,
       "pricing": {
-        "completion": "0.00000107315",
-        "input_cache_write": "0.0000002236",
-        "prompt": "0.0000001794"
+        "completion": "0.00000195",
+        "input_cache_write": "0.00000040625",
+        "prompt": "0.000000325"
       },
       "supported_parameters": [
         "include_reasoning",
@@ -4869,7 +4868,7 @@
       "top_provider": {
         "context_length": 262144,
         "is_moderated": false,
-        "max_completion_tokens": 65536
+        "max_completion_tokens": 262144
       }
     },
     {
