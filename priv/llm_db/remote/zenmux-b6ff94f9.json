@@ -63,6 +63,40 @@
       "capabilities": {
         "reasoning": true
       },
+      "context_length": 256000,
+      "created": 1779357254,
+      "display_name": "Sapiens AI: Agnes-2.0-Flash",
+      "id": "sapiens-ai/agnes-2.0-flash",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "object": "model",
+      "output_modalities": [
+        "text"
+      ],
+      "owned_by": "sapiens-ai",
+      "pricings": {
+        "completion": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.2
+          }
+        ],
+        "prompt": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.1
+          }
+        ]
+      }
+    },
+    {
+      "capabilities": {
+        "reasoning": true
+      },
       "context_length": 1048576,
       "created": 1779195792,
       "display_name": "Google: Gemini 3.5 Flash Free",
@@ -1359,6 +1393,40 @@
             "currency": "USD",
             "unit": "perMTokens",
             "value": 0.1
+          }
+        ]
+      }
+    },
+    {
+      "capabilities": {
+        "reasoning": false
+      },
+      "context_length": 10000,
+      "created": 1776822680,
+      "display_name": "OpenAI: GPT-Image-2",
+      "id": "openai/gpt-image-2",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "object": "model",
+      "output_modalities": [
+        "image"
+      ],
+      "owned_by": "openai",
+      "pricings": {
+        "input_cache_read": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 1.25
+          }
+        ],
+        "prompt": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 5
           }
         ]
       }
@@ -5247,6 +5315,48 @@
     },
     {
       "capabilities": {
+        "reasoning": false
+      },
+      "context_length": 10000,
+      "created": 1767689330,
+      "display_name": "OpenAI: GPT-Image-1.5",
+      "id": "openai/gpt-image-1.5",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "object": "model",
+      "output_modalities": [
+        "text",
+        "image"
+      ],
+      "owned_by": "openai",
+      "pricings": {
+        "completion": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 10
+          }
+        ],
+        "input_cache_read": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 1.25
+          }
+        ],
+        "prompt": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 5
+          }
+        ]
+      }
+    },
+    {
+      "capabilities": {
         "reasoning": true
       },
       "context_length": 400000,
@@ -6284,94 +6394,66 @@
     },
     {
       "capabilities": {
-        "reasoning": true
+        "reasoning": false
       },
-      "context_length": 262144,
-      "created": 1762426731,
-      "display_name": "MoonshotAI: Kimi K2 Thinking",
-      "id": "moonshotai/kimi-k2-thinking",
+      "context_length": 8192,
+      "created": 1776404323,
+      "display_name": "OpenAI: Text Embedding 3 Small",
+      "id": "openai/text-embedding-3-small",
       "input_modalities": [
         "text"
       ],
       "object": "model",
       "output_modalities": [
-        "text"
+        "embeddings"
       ],
-      "owned_by": "moonshotai",
+      "owned_by": "openai",
       "pricings": {
         "completion": [
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 2.5
-          }
-        ],
-        "input_cache_read": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.15
+            "value": 0
           }
         ],
         "prompt": [
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 0.6
-          }
-        ],
-        "web_search": [
-          {
-            "currency": "USD",
-            "unit": "perCount",
-            "value": 0.0044
+            "value": 0.02
           }
         ]
       }
     },
     {
       "capabilities": {
-        "reasoning": true
+        "reasoning": false
       },
-      "context_length": 262144,
-      "created": 1762426806,
-      "display_name": "MoonshotAI: Kimi K2 Thinking Turbo",
-      "id": "moonshotai/kimi-k2-thinking-turbo",
+      "context_length": 8192,
+      "created": 1779708328,
+      "display_name": "OpenAI: Text Embedding 3 Large",
+      "id": "openai/text-embedding-3-large",
       "input_modalities": [
         "text"
       ],
       "object": "model",
       "output_modalities": [
-        "text"
+        "embeddings"
       ],
-      "owned_by": "moonshotai",
+      "owned_by": "openai",
       "pricings": {
         "completion": [
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 8
-          }
-        ],
-        "input_cache_read": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.15
+            "value": 0
           }
         ],
         "prompt": [
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 1.15
-          }
-        ],
-        "web_search": [
-          {
-            "currency": "USD",
-            "unit": "perCount",
-            "value": 0.0044
+            "value": 0.13
           }
         ]
       }
@@ -7259,53 +7341,6 @@
             "currency": "USD",
             "unit": "perCount",
             "value": 0.0006
-          }
-        ]
-      }
-    },
-    {
-      "capabilities": {
-        "reasoning": false
-      },
-      "context_length": 262100,
-      "created": 1757400810,
-      "display_name": "MoonshotAI: Kimi K2 0905",
-      "id": "moonshotai/kimi-k2-0905",
-      "input_modalities": [
-        "text"
-      ],
-      "object": "model",
-      "output_modalities": [
-        "text"
-      ],
-      "owned_by": "moonshotai",
-      "pricings": {
-        "completion": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 2.33
-          }
-        ],
-        "input_cache_read": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.15
-          }
-        ],
-        "prompt": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.58
-          }
-        ],
-        "web_search": [
-          {
-            "currency": "USD",
-            "unit": "perCount",
-            "value": 0.0044
           }
         ]
       }
@@ -8511,21 +8546,6 @@
           }
         ]
       }
-    },
-    {
-      "capabilities": {},
-      "context_length": 32768,
-      "created": 1757334050,
-      "display_name": "MoonshotAI: Kimi K2 0711",
-      "id": "moonshotai/kimi-k2-0711",
-      "input_modalities": [
-        "text"
-      ],
-      "object": "model",
-      "output_modalities": [
-        "text"
-      ],
-      "owned_by": "moonshotai"
     },
     {
       "capabilities": {

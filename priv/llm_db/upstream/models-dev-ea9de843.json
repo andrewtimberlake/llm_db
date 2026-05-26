@@ -1,4 +1,80 @@
 {
+  "poolside": {
+    "api": "https://inference.poolside.ai/v1",
+    "doc": "https://platform.poolside.ai",
+    "env": [
+      "POOLSIDE_API_KEY"
+    ],
+    "id": "poolside",
+    "models": {
+      "poolside/laguna-m.1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "id": "poolside/laguna-m.1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-28",
+        "limit": {
+          "context": 131040,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Laguna M.1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-28",
+        "temperature": true,
+        "tool_call": true
+      },
+      "poolside/laguna-xs.2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "id": "poolside/laguna-xs.2",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-28",
+        "limit": {
+          "context": 131040,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Laguna XS.2",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-28",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Poolside",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "ollama-cloud": {
     "api": "https://ollama.com/v1",
     "doc": "https://docs.ollama.com/cloud",
@@ -1120,9 +1196,9 @@
       "deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.145,
-          "input": 1.74,
-          "output": 3.48
+          "cache_read": 0.003625,
+          "input": 0.435,
+          "output": 0.87
         },
         "family": "deepseek-thinking",
         "id": "deepseek-v4-pro",
@@ -1342,7 +1418,7 @@
       "deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
+          "cache_read": 0.0028,
           "input": 0.14,
           "output": 0.28
         },
@@ -9012,9 +9088,9 @@
       "deepseek-ai/DeepSeek-V4-Pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.145,
-          "input": 1.74,
-          "output": 3.48
+          "cache_read": 0.003625,
+          "input": 0.435,
+          "output": 0.87
         },
         "family": "deepseek-thinking",
         "id": "deepseek-ai/DeepSeek-V4-Pro",
@@ -9234,7 +9310,7 @@
       "deepseek-ai/DeepSeek-V4-Flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
+          "cache_read": 0.0028,
           "input": 0.14,
           "output": 0.28
         },
@@ -37065,9 +37141,9 @@
       "deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.145,
-          "input": 1.74,
-          "output": 3.48
+          "cache_read": 0.003625,
+          "input": 0.435,
+          "output": 0.87
         },
         "family": "deepseek-thinking",
         "id": "deepseek-v4-pro",
@@ -41070,16 +41146,16 @@
       "deepseek/deepseek-chat": {
         "attachment": false,
         "cost": {
-          "input": 0.32,
-          "output": 0.89
+          "input": 0.2288,
+          "output": 0.9144
         },
         "family": "deepseek",
         "id": "deepseek/deepseek-chat",
         "knowledge": "2025-09",
         "last_updated": "2026-02-28",
         "limit": {
-          "context": 163840,
-          "output": 16384
+          "context": 128000,
+          "output": 16000
         },
         "modalities": {
           "input": [
@@ -51038,37 +51114,6 @@
         "reasoning": true,
         "release_date": "2026-04-28",
         "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "alibaba/tongyi-deepresearch-30b-a3b": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.09,
-          "input": 0.09,
-          "output": 0.45
-        },
-        "family": "yi",
-        "id": "alibaba/tongyi-deepresearch-30b-a3b",
-        "knowledge": "2025-03-31",
-        "last_updated": "2025-09-18",
-        "limit": {
-          "context": 131072,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Tongyi DeepResearch 30B A3B",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-09-18",
-        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -63541,7 +63586,8 @@
         "last_updated": "2025-10-17",
         "limit": {
           "context": 200000,
-          "output": 128000
+          "input": 160000,
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -69439,9 +69485,9 @@
       "deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.145,
-          "input": 1.74,
-          "output": 3.48
+          "cache_read": 0.003625,
+          "input": 0.435,
+          "output": 0.87
         },
         "family": "deepseek-thinking",
         "id": "deepseek-v4-pro",
@@ -69881,7 +69927,7 @@
       "deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
+          "cache_read": 0.0028,
           "input": 0.14,
           "output": 0.28
         },
@@ -70318,6 +70364,36 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-04-02",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.7-max": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 3.125,
+          "input": 2.5,
+          "output": 7.5
+        },
+        "family": "qwen",
+        "id": "qwen3.7-max",
+        "last_updated": "2026-05-21",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.7 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-21",
         "temperature": true,
         "tool_call": true
       },
@@ -75076,36 +75152,6 @@
         "temperature": false,
         "tool_call": true
       },
-      "qwen37-max": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.5,
-          "cache_write": 3.125,
-          "input": 2.5,
-          "output": 7.5
-        },
-        "family": "qwen",
-        "id": "qwen37-max",
-        "last_updated": "2026-05-21",
-        "limit": {
-          "context": 1000000,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3.7 Max",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2026-05-21",
-        "temperature": true,
-        "tool_call": true
-      },
       "gpt-5.4": {
         "attachment": true,
         "cost": {
@@ -78407,7 +78453,7 @@
       "deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
+          "cache_read": 0.0028,
           "input": 0.14,
           "output": 0.28
         },
@@ -78441,9 +78487,9 @@
       "deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.145,
-          "input": 1.74,
-          "output": 3.48
+          "cache_read": 0.003625,
+          "input": 0.435,
+          "output": 0.87
         },
         "family": "deepseek-thinking",
         "id": "deepseek-v4-pro",
@@ -80566,7 +80612,7 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
+          "cache_read": 0.0028,
           "input": 0.19,
           "output": 0.37
         },
@@ -81623,7 +81669,7 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.145,
+          "cache_read": 0.003625,
           "input": 0.56,
           "output": 1.12
         },
@@ -83106,10 +83152,10 @@
         },
         "id": "xpersona-frieren-coder",
         "knowledge": "2025-12-30",
-        "last_updated": "2026-05-15",
+        "last_updated": "2026-05-25",
         "limit": {
-          "context": 400000,
-          "output": 128000
+          "context": 1000000,
+          "output": 384000
         },
         "modalities": {
           "input": [
@@ -94339,7 +94385,7 @@
       "deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.145,
+          "cache_read": 0.003625,
           "input": 1.553,
           "output": 3.106
         },
@@ -94459,7 +94505,7 @@
       "deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
+          "cache_read": 0.0028,
           "input": 0.133,
           "output": 0.266
         },
@@ -96639,9 +96685,9 @@
       "deepseek-ai/DeepSeek-V4-Pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.145,
-          "input": 1.74,
-          "output": 3.48
+          "cache_read": 0.003625,
+          "input": 0.435,
+          "output": 0.87
         },
         "family": "deepseek-thinking",
         "id": "deepseek-ai/DeepSeek-V4-Pro",
@@ -110994,9 +111040,9 @@
       "deepseek-ai/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.145,
-          "input": 1.74,
-          "output": 3.48
+          "cache_read": 0.003625,
+          "input": 0.435,
+          "output": 0.87
         },
         "family": "deepseek-thinking",
         "id": "deepseek-ai/deepseek-v4-pro",
@@ -111630,7 +111676,7 @@
       "deepseek-ai/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
+          "cache_read": 0.0028,
           "input": 0.14,
           "output": 0.28
         },
@@ -115815,7 +115861,7 @@
       "route/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
+          "cache_read": 0.0028,
           "input": 0.4928,
           "output": 0.7392
         },
@@ -115849,7 +115895,7 @@
       "route/deepseek-v4-flash-6bit": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
+          "cache_read": 0.0028,
           "input": 0.4928,
           "output": 0.7392
         },
@@ -115883,7 +115929,7 @@
       "route/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.145,
+          "cache_read": 0.003625,
           "input": 0.4928,
           "output": 0.7392
         },
@@ -115917,7 +115963,7 @@
       "route/deepseek-v4-pro-6bit": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.145,
+          "cache_read": 0.003625,
           "input": 0.4928,
           "output": 0.7392
         },
@@ -139150,7 +139196,7 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
+          "cache_read": 0.0028,
           "input": 0.14,
           "output": 0.28
         },
@@ -140509,9 +140555,9 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.145,
-          "input": 1.74,
-          "output": 3.48
+          "cache_read": 0.003625,
+          "input": 0.435,
+          "output": 0.87
         },
         "family": "deepseek-thinking",
         "id": "deepseek/deepseek-v4-pro",
@@ -148228,19 +148274,80 @@
     ],
     "id": "vultr",
     "models": {
-      "DeepSeek-V3.2": {
+      "MiniMaxAI/MiniMax-M2.7": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 1.2
+        },
+        "family": "minimax",
+        "id": "MiniMaxAI/MiniMax-M2.7",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/Kimi-K2.6": {
+        "attachment": true,
+        "cost": {
+          "input": 0.15,
+          "output": 0.6
+        },
+        "family": "kimi-k2.6",
+        "id": "moonshotai/Kimi-K2.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262144,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.6",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "nvidia/DeepSeek-V3.2-NVFP4": {
         "attachment": false,
         "cost": {
           "input": 0.55,
           "output": 1.65
         },
         "family": "deepseek",
-        "id": "DeepSeek-V3.2",
+        "id": "nvidia/DeepSeek-V3.2-NVFP4",
         "knowledge": "2024-07",
         "last_updated": "2025-12-01",
         "limit": {
-          "context": 127000,
-          "output": 4096
+          "context": 131072,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -148252,21 +148359,110 @@
         },
         "name": "DeepSeek V3.2",
         "open_weights": true,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2025-12-01",
         "temperature": true,
         "tool_call": true
       },
-      "GLM-5-FP8": {
+      "nvidia/Llama-3.1-Nemotron-Safety-Guard-8B-v3": {
+        "attachment": false,
+        "cost": {
+          "input": 0.01,
+          "output": 0.01
+        },
+        "family": "llama",
+        "id": "nvidia/Llama-3.1-Nemotron-Safety-Guard-8B-v3",
+        "knowledge": "2023-12",
+        "last_updated": "2025-10-28",
+        "limit": {
+          "context": 8192,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.1 Nemotron Safety Guard",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-10-28",
+        "temperature": true,
+        "tool_call": false
+      },
+      "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16": {
+        "attachment": false,
+        "cost": {
+          "input": 0.13,
+          "output": 0.38
+        },
+        "family": "nemotron",
+        "id": "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16",
+        "knowledge": "2025-05",
+        "last_updated": "2026-04-28",
+        "limit": {
+          "context": 262144,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "NVIDIA Nemotron 3 Nano Omni",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-28",
+        "temperature": true,
+        "tool_call": true
+      },
+      "nvidia/Nemotron-Cascade-2-30B-A3B": {
+        "attachment": false,
+        "cost": {
+          "input": 0.15,
+          "output": 0.6
+        },
+        "family": "nemotron",
+        "id": "nvidia/Nemotron-Cascade-2-30B-A3B",
+        "knowledge": "2024-07",
+        "last_updated": "2025-12-01",
+        "limit": {
+          "context": 262144,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "NVIDIA Nemotron Cascade 2",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-5.1-FP8": {
         "attachment": false,
         "cost": {
           "input": 0.85,
           "output": 3.1
         },
         "family": "glm",
-        "id": "GLM-5-FP8",
-        "knowledge": "2025-05",
-        "last_updated": "2026-02-11",
+        "id": "zai-org/GLM-5.1-FP8",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-03-27",
         "limit": {
           "context": 200000,
           "output": 131072
@@ -148279,97 +148475,11 @@
             "text"
           ]
         },
-        "name": "GLM 5 FP8",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2026-02-11",
-        "temperature": true,
-        "tool_call": true
-      },
-      "Kimi-K2.5": {
-        "attachment": false,
-        "cost": {
-          "input": 0.55,
-          "output": 2.75
-        },
-        "family": "kimi",
-        "id": "Kimi-K2.5",
-        "knowledge": "2024-04",
-        "last_updated": "2026-01-27",
-        "limit": {
-          "context": 254000,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Kimi K2 Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2026-01-27",
-        "temperature": true,
-        "tool_call": true
-      },
-      "MiniMax-M2.5": {
-        "attachment": false,
-        "cost": {
-          "input": 0.3,
-          "output": 1.2
-        },
-        "family": "minimax",
-        "id": "MiniMax-M2.5",
-        "knowledge": "2024-09",
-        "last_updated": "2025-02-11",
-        "limit": {
-          "context": 194000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMax M2.5",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-02-11",
-        "temperature": true,
-        "tool_call": true
-      },
-      "gpt-oss-120b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.15,
-          "output": 0.6
-        },
-        "family": "gpt-oss",
-        "id": "gpt-oss-120b",
-        "knowledge": "2024-06",
-        "last_updated": "2025-08-05",
-        "limit": {
-          "context": 129000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT OSS 120B",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-08-05",
+        "name": "GLM-5.1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-27",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       }
@@ -149305,14 +149415,14 @@
       "gemini-3-5-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.18,
-          "cache_write": 0.1,
-          "input": 1.8,
-          "output": 11
+          "cache_read": 0.155,
+          "cache_write": 0.086,
+          "input": 1.55,
+          "output": 9.45
         },
         "family": "gemini-flash",
         "id": "gemini-3-5-flash",
-        "last_updated": "2026-05-22",
+        "last_updated": "2026-05-25",
         "limit": {
           "context": 1000000,
           "output": 65536
@@ -149717,12 +149827,12 @@
       "google-gemma-4-31b-it": {
         "attachment": true,
         "cost": {
-          "input": 0.175,
-          "output": 0.5
+          "input": 0.155,
+          "output": 0.44
         },
         "family": "gemma",
         "id": "google-gemma-4-31b-it",
-        "last_updated": "2026-04-12",
+        "last_updated": "2026-05-25",
         "limit": {
           "context": 256000,
           "output": 8192
@@ -150305,14 +150415,14 @@
       "qwen-3-7-max": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.3125,
-          "cache_write": 3.90625,
-          "input": 3.125,
-          "output": 9.375
+          "cache_read": 0.27,
+          "cache_write": 3.35,
+          "input": 2.7,
+          "output": 8.05
         },
         "family": "qwen",
         "id": "qwen-3-7-max",
-        "last_updated": "2026-05-22",
+        "last_updated": "2026-05-25",
         "limit": {
           "context": 1000000,
           "output": 65536
@@ -151325,10 +151435,10 @@
         },
         "family": "qwen",
         "id": "qwen3-5-35b-a3b",
-        "last_updated": "2026-04-16",
+        "last_updated": "2026-05-25",
         "limit": {
           "context": 256000,
-          "output": 65536
+          "output": 16384
         },
         "modalities": {
           "input": [
