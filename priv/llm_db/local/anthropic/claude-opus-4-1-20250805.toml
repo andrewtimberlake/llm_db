@@ -6,4 +6,13 @@ aliases = [
 ]
 
 [lifecycle]
-status = "active"
+status = "deprecated"
+deprecated_at = "2026-06-05"
+retires_at = "2026-08-05"
+replacement = "claude-opus-4-8"
+
+[cost]
+input = 15.0
+output = 75.0
+cache_read = 1.5
+cache_write = 18.75

@@ -7,7 +7,7 @@ aliases = [
 ]
 
 [lifecycle]
-status = "deprecated"
-deprecated_at = "2025-02-19"
+status = "retired"
+deprecated_at = "2025-10-28"
 retires_at = "2026-02-19"
-replacement = "claude-sonnet-4-5-20250929"
+replacement = "claude-sonnet-4-6"

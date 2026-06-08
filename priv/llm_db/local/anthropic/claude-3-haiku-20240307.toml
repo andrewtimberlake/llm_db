@@ -5,4 +5,7 @@ aliases = [
 ]
 
 [lifecycle]
-status = "active"
+status = "retired"
+deprecated_at = "2026-02-19"
+retires_at = "2026-04-20"
+replacement = "claude-haiku-4-5-20251001"
