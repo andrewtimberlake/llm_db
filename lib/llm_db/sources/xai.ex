@@ -195,12 +195,81 @@ defmodule LLMDB.Sources.XAI do
     %{
       id: model["id"],
       provider: :xai,
-      extra: %{
-        created: model["created"],
-        owned_by: model["owned_by"]
-      }
+      extra:
+        %{}
+        |> maybe_put(:created, model["created"])
+        |> maybe_put(:owned_by, model["owned_by"])
+        |> maybe_put(:long_context_threshold, model["long_context_threshold"])
     }
+    |> maybe_put(:cost, cost_from_model(model))
+    |> maybe_put(:pricing, pricing_from_model(model))
   end
+
+  defp cost_from_model(model) do
+    %{}
+    |> maybe_put(:input, token_price(model["prompt_text_token_price"]))
+    |> maybe_put(:cache_read, token_price(model["cached_prompt_text_token_price"]))
+    |> maybe_put(:output, token_price(model["completion_text_token_price"]))
+    |> maybe_put(:image, token_price(model["prompt_image_token_price"]))
+    |> empty_to_nil()
+  end
+
+  defp pricing_from_model(model) do
+    components =
+      []
+      |> maybe_add_long_context_component(
+        "token.input.long_context",
+        model["prompt_text_token_price_long_context"],
+        model["long_context_threshold"]
+      )
+      |> maybe_add_long_context_component(
+        "token.cache_read.long_context",
+        model["cached_prompt_text_token_price_long_context"],
+        model["long_context_threshold"]
+      )
+      |> maybe_add_long_context_component(
+        "token.output.long_context",
+        model["completion_text_token_price_long_context"],
+        model["long_context_threshold"]
+      )
+
+    case components do
+      [] -> nil
+      _ -> %{currency: "USD", merge: "merge_by_id", components: components}
+    end
+  end
+
+  defp maybe_add_long_context_component(components, _id, nil, _threshold), do: components
+  defp maybe_add_long_context_component(components, _id, _price, nil), do: components
+
+  defp maybe_add_long_context_component(components, id, price, threshold) do
+    case token_price(price) do
+      nil ->
+        components
+
+      rate ->
+        components ++
+          [
+            %{
+              id: id,
+              kind: "token",
+              unit: "token",
+              per: 1_000_000,
+              rate: rate,
+              notes: "Applies above #{threshold} context tokens"
+            }
+          ]
+    end
+  end
+
+  defp token_price(nil), do: nil
+  defp token_price(price) when is_number(price), do: price / 10_000
+
+  defp maybe_put(map, _key, nil), do: map
+  defp maybe_put(map, key, value), do: Map.put(map, key, value)
+
+  defp empty_to_nil(map) when map_size(map) == 0, do: nil
+  defp empty_to_nil(map), do: map
 
   defp get_url(opts) do
     case Map.get(opts, :region) do
