@@ -126,14 +126,6 @@ defmodule LLMDB.Sources.Anthropic do
           id: "claude-sonnet-4-20250514",
           provider: :anthropic,
           name: "Claude Sonnet 4",
-          limits: %{
-            context: 200000,
-            output: 64000
-          },
-          modalities: %{
-            input: [:text, :image, :pdf],
-            output: [:text]
-          },
           extra: %{
             type: "model",
             created_at: "2025-02-19T00:00:00Z"
@@ -159,42 +151,39 @@ defmodule LLMDB.Sources.Anthropic do
     }
   end
 
+  @mapped_fields ~w[
+    id display_name created_at max_input_tokens max_tokens capabilities
+  ]
+
   defp transform_model(model) do
-    base = %{
+    %{
       id: model["id"],
       provider: :anthropic
     }
+    |> put_if_present(:name, model["display_name"])
+    |> put_if_present(:release_date, parse_date(model["created_at"]))
+    |> map_limits(model)
+    |> map_modalities(model["capabilities"])
+    |> map_capabilities(model["capabilities"])
+    |> map_extra(model)
+  end
 
-    base =
-      if display_name = model["display_name"] do
-        Map.put(base, :name, display_name)
-      else
-        base
-      end
+  defp parse_date(nil), do: nil
 
-    base =
-      base
-      |> map_limits(model)
-      |> map_modalities(model["capabilities"])
-      |> map_capabilities(model["capabilities"])
-
-    extra =
-      model
-      |> Map.drop(["id", "display_name", "max_input_tokens", "max_tokens"])
-      |> Enum.reduce(%{}, fn {k, v}, acc -> Map.put(acc, String.to_atom(k), v) end)
-
-    if map_size(extra) > 0 do
-      Map.put(base, :extra, extra)
-    else
-      base
+  defp parse_date(datetime) when is_binary(datetime) do
+    case DateTime.from_iso8601(datetime) do
+      {:ok, parsed, _offset} -> parsed |> DateTime.to_date() |> Date.to_iso8601()
+      {:error, _reason} -> nil
     end
   end
 
-  defp map_limits(model, source_model) do
+  defp parse_date(_datetime), do: nil
+
+  defp map_limits(model, source) do
     limits =
       %{}
-      |> put_if_valid_limit(:context, source_model["max_input_tokens"])
-      |> put_if_valid_limit(:output, source_model["max_tokens"])
+      |> put_if_valid_limit(:context, source["max_input_tokens"])
+      |> put_if_valid_limit(:output, source["max_tokens"])
 
     if map_size(limits) > 0 do
       Map.put(model, :limits, limits)
@@ -206,8 +195,8 @@ defmodule LLMDB.Sources.Anthropic do
   defp map_modalities(model, capabilities) when is_map(capabilities) do
     input =
       [:text]
-      |> maybe_append(:image, supported?(capabilities, "image_input"))
-      |> maybe_append(:pdf, supported?(capabilities, "pdf_input"))
+      |> maybe_add_modality(:image, supported?(capabilities, "image_input"))
+      |> maybe_add_modality(:pdf, supported?(capabilities, "pdf_input"))
 
     Map.put(model, :modalities, %{input: input, output: [:text]})
   end
@@ -217,10 +206,14 @@ defmodule LLMDB.Sources.Anthropic do
   defp map_capabilities(model, capabilities) when is_map(capabilities) do
     canonical =
       %{}
-      |> put_if_true(:reasoning, %{enabled: true}, supported?(capabilities, "thinking"))
-      |> put_if_true(
+      |> maybe_put_capability(
+        :reasoning,
+        %{enabled: true},
+        supported?(capabilities, "thinking")
+      )
+      |> maybe_put_capability(
         :json,
-        %{native: false, schema: true, strict: false},
+        %{schema: true},
         supported?(capabilities, "structured_outputs")
       )
 
@@ -233,24 +226,42 @@ defmodule LLMDB.Sources.Anthropic do
 
   defp map_capabilities(model, _capabilities), do: model
 
-  defp supported?(capabilities, key) do
-    case get_in(capabilities, [key, "supported"]) do
-      true -> true
-      _other -> false
+  defp map_extra(model, source) do
+    extra =
+      source
+      |> Map.drop(@mapped_fields)
+      |> Enum.reduce(%{}, fn {k, v}, acc -> Map.put(acc, String.to_atom(k), v) end)
+
+    if map_size(extra) > 0 do
+      Map.put(model, :extra, extra)
+    else
+      model
     end
   end
 
-  defp maybe_append(list, value, true), do: list ++ [value]
-  defp maybe_append(list, _value, _supported?), do: list
+  defp put_if_present(map, _key, nil), do: map
+  defp put_if_present(map, key, value), do: Map.put(map, key, value)
 
-  defp put_if_true(map, key, value, true), do: Map.put(map, key, value)
-  defp put_if_true(map, _key, _value, _flag), do: map
+  defp put_if_valid_limit(map, _key, nil), do: map
+  defp put_if_valid_limit(map, _key, 0), do: map
 
   defp put_if_valid_limit(map, key, value) when is_integer(value) and value > 0 do
     Map.put(map, key, value)
   end
 
   defp put_if_valid_limit(map, _key, _value), do: map
+
+  defp maybe_add_modality(modalities, modality, true), do: modalities ++ [modality]
+  defp maybe_add_modality(modalities, _modality, _supported), do: modalities
+
+  defp maybe_put_capability(capabilities, key, value, true),
+    do: Map.put(capabilities, key, value)
+
+  defp maybe_put_capability(capabilities, _key, _value, _supported), do: capabilities
+
+  defp supported?(capabilities, name) do
+    match?(%{"supported" => true}, Map.get(capabilities, name))
+  end
 
   defp fetch_all_pages(url, req_opts, limit, acc) do
     params = [limit: limit]
