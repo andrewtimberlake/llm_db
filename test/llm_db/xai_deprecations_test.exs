@@ -1,7 +1,7 @@
 defmodule LLMDB.XAIDeprecationsTest do
   use ExUnit.Case, async: false
 
-  alias LLMDB.{Model, Normalize}
+  alias LLMDB.{Model, Normalize, Provider}
   alias LLMDB.Sources.Local
 
   @local_dir "priv/llm_db/local"
@@ -10,13 +10,13 @@ defmodule LLMDB.XAIDeprecationsTest do
 
   @expected_lifecycle %{
     "grok-4-1-fast-reasoning" => "grok-4.3",
-    "grok-4-1-fast-non-reasoning" => "grok-4.20-non-reasoning",
+    "grok-4-1-fast-non-reasoning" => "grok-4.3",
     "grok-4-fast-reasoning" => "grok-4.3",
-    "grok-4-fast-non-reasoning" => "grok-4.20-non-reasoning",
+    "grok-4-fast-non-reasoning" => "grok-4.3",
     "grok-4-0709" => "grok-4.3",
-    "grok-code-fast-1" => "grok-4.20-non-reasoning",
-    "grok-3" => "grok-4.20-non-reasoning",
-    "grok-imagine-image-pro" => "grok-imagine-image"
+    "grok-code-fast-1" => "grok-build-0.1",
+    "grok-3" => "grok-4.3",
+    "grok-imagine-image-pro" => "grok-imagine-image-quality"
   }
 
   test "local xAI overrides codify the 2026-05-15 retirement batch" do
@@ -52,27 +52,65 @@ defmodule LLMDB.XAIDeprecationsTest do
            ]
   end
 
-  test "recommended replacement models are present for non-reasoning and image workloads" do
+  test "local xAI replacement overlays point at documented active targets" do
     models = xai_models()
-    non_reasoning = Map.fetch!(models, "grok-4.20-non-reasoning")
-    image = Map.fetch!(models, "grok-imagine-image")
+    replacement = Map.fetch!(models, "grok-4.3")
+    image = Map.fetch!(models, "grok-imagine-image-quality")
 
-    assert non_reasoning.capabilities.reasoning.enabled == false
-    assert non_reasoning.limits.context == 2_000_000
-    assert non_reasoning.cost.input == 2
-    assert non_reasoning.cost.output == 6
+    assert replacement.capabilities.reasoning.enabled == true
+    assert replacement.limits.context == 1_000_000
+    assert replacement.cost.input == 1.25
+    assert replacement.cost.output == 2.5
 
-    assert image.capabilities.chat == false
-    assert image.modalities.output == [:image]
+    assert pricing_rate(image, "image.output.1k") == 0.05
+    assert pricing_rate(image, "image.output.2k") == 0.07
+  end
+
+  test "local xAI provider defaults capture documented tool pricing aliases" do
+    provider = xai_provider()
+    components = Map.new(provider.pricing_defaults.components, &{&1.id, &1})
+
+    assert components["tool.web_search"].rate == 5.0
+    assert components["tool.x_search"].rate == 5.0
+    assert components["tool.code_execution"].rate == 5.0
+    assert components["tool.code_interpreter"].rate == 5.0
+    assert components["tool.attachment_search"].rate == 10.0
+    assert components["tool.collections_search"].rate == 2.5
+    assert components["tool.file_search"].rate == 2.5
+    refute Map.has_key?(components, "tool.document_search")
+  end
+
+  test "local xAI overrides capture docs-only Imagine video pricing" do
+    video = xai_models() |> Map.fetch!("grok-imagine-video")
+
+    assert pricing_rate(video, "image.input") == 0.002
+    assert pricing_rate(video, "video.input.second") == 0.01
+    assert pricing_rate(video, "video.output.480p.second") == 0.05
+    assert pricing_rate(video, "video.output.720p.second") == 0.07
+  end
+
+  defp xai_provider do
+    xai_local_data()
+    |> Map.delete(:models)
+    |> Map.put(:id, :xai)
+    |> Provider.new!()
   end
 
   defp xai_models do
-    {:ok, data} = Local.load(%{dir: @local_dir})
-    xai = Map.fetch!(data, "xai")
-
-    xai.models
+    xai_local_data().models
     |> Normalize.normalize_models()
     |> Enum.map(&Model.new!/1)
     |> Map.new(&{&1.id, &1})
+  end
+
+  defp xai_local_data do
+    {:ok, data} = Local.load(%{dir: @local_dir})
+    Map.fetch!(data, "xai")
+  end
+
+  defp pricing_rate(model, component_id) do
+    model.pricing.components
+    |> Enum.find(&(&1.id == component_id))
+    |> Map.fetch!(:rate)
   end
 end

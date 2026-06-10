@@ -45,17 +45,33 @@ per = 1000
 rate = 5.0
 
 [[pricing_defaults.components]]
-id = "tool.document_search"
+id = "tool.code_interpreter"
 kind = "tool"
-tool = "document_search"
+tool = "code_interpreter"
 unit = "call"
 per = 1000
 rate = 5.0
 
 [[pricing_defaults.components]]
+id = "tool.attachment_search"
+kind = "tool"
+tool = "attachment_search"
+unit = "call"
+per = 1000
+rate = 10.0
+
+[[pricing_defaults.components]]
 id = "tool.collections_search"
 kind = "tool"
 tool = "collections_search"
+unit = "call"
+per = 1000
+rate = 2.5
+
+[[pricing_defaults.components]]
+id = "tool.file_search"
+kind = "tool"
+tool = "file_search"
 unit = "call"
 per = 1000
 rate = 2.5
