@@ -7,6 +7,33 @@ This project uses [Calendar Versioning](https://calver.org/) with the format `YY
 
 <!-- changelog -->
 
+## [2026.6.1](https://github.com/agentjido/llm_db/compare/2026.6.1...2026.6.1) (2026-06-11)
+
+
+
+
+### Features:
+
+* evolve model pricing and capability metadata by mikehostetler
+
+### Bug Fixes:
+
+* update xai model metadata by github-actions[bot]
+
+* update openrouter metadata capture by github-actions[bot]
+
+* update amazon bedrock metadata by github-actions[bot]
+
+* update azure model metadata by github-actions[bot]
+
+* update google vertex model metadata by github-actions[bot]
+
+* update google model metadata by github-actions[bot]
+
+* update anthropic model metadata by github-actions[bot]
+
+* update openai lifecycle metadata by github-actions[bot]
+
 ## [2026.6.0](https://github.com/agentjido/llm_db/compare/2026.6.0...2026.6.0) (2026-06-09)
 
 
