@@ -5,6 +5,55 @@
         "reasoning": true
       },
       "context_length": 262144,
+      "created": 1781525697,
+      "display_name": "MoonshotAI: Kimi K2.7 Code HighSpeed",
+      "id": "moonshotai/kimi-k2.7-code-highspeed",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "object": "model",
+      "output_modalities": [
+        "text"
+      ],
+      "owned_by": "moonshotai",
+      "pricings": {
+        "completion": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 8
+          }
+        ],
+        "input_cache_read": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.38
+          }
+        ],
+        "prompt": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 1.9
+          }
+        ],
+        "web_search": [
+          {
+            "currency": "USD",
+            "unit": "perCount",
+            "value": 0.005
+          }
+        ]
+      }
+    },
+    {
+      "capabilities": {
+        "reasoning": true
+      },
+      "context_length": 262144,
       "created": 1781262337,
       "display_name": "MoonshotAI: Kimi K2.7 Code",
       "id": "moonshotai/kimi-k2.7-code",
@@ -99,7 +148,9 @@
       }
     },
     {
-      "capabilities": {},
+      "capabilities": {
+        "reasoning": true
+      },
       "context_length": 1000000,
       "created": 1781036493,
       "display_name": "Anthropic: Claude Fable 5",
@@ -113,7 +164,51 @@
       "output_modalities": [
         "text"
       ],
-      "owned_by": "anthropic"
+      "owned_by": "anthropic",
+      "pricings": {
+        "completion": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 50
+          }
+        ],
+        "input_cache_read": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 1
+          }
+        ],
+        "input_cache_write_1_h": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 20
+          }
+        ],
+        "input_cache_write_5_min": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 12.5
+          }
+        ],
+        "prompt": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 10
+          }
+        ],
+        "web_search": [
+          {
+            "currency": "USD",
+            "unit": "perCount",
+            "value": 0.014
+          }
+        ]
+      }
     },
     {
       "capabilities": {
@@ -6829,86 +6924,6 @@
       "capabilities": {
         "reasoning": true
       },
-      "context_length": 128000,
-      "created": 1759321683,
-      "display_name": "inclusionAI: Ring-1T",
-      "id": "inclusionai/ring-1t",
-      "input_modalities": [
-        "text"
-      ],
-      "object": "model",
-      "output_modalities": [
-        "text"
-      ],
-      "owned_by": "inclusionai",
-      "pricings": {
-        "completion": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 2.24
-          }
-        ],
-        "input_cache_read": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.112
-          }
-        ],
-        "prompt": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.56
-          }
-        ]
-      }
-    },
-    {
-      "capabilities": {
-        "reasoning": false
-      },
-      "context_length": 128000,
-      "created": 1759321812,
-      "display_name": "inclusionAI: Ling-1T",
-      "id": "inclusionai/ling-1t",
-      "input_modalities": [
-        "text"
-      ],
-      "object": "model",
-      "output_modalities": [
-        "text"
-      ],
-      "owned_by": "inclusionai",
-      "pricings": {
-        "completion": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 2.24
-          }
-        ],
-        "input_cache_read": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.112
-          }
-        ],
-        "prompt": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.56
-          }
-        ]
-      }
-    },
-    {
-      "capabilities": {
-        "reasoning": true
-      },
       "context_length": 400000,
       "created": 1760319625,
       "display_name": "OpenAI: GPT-5 Pro",
@@ -7609,7 +7624,7 @@
       },
       "context_length": 1000000,
       "created": 1781165922,
-      "display_name": "Qwen3-ASR-Flash",
+      "display_name": "Qwen: Qwen3 ASR Flash",
       "id": "qwen/qwen3-asr-flash",
       "input_modalities": [
         "audio"
@@ -9146,7 +9161,7 @@
       "capabilities": {
         "reasoning": true
       },
-      "context_length": 1000000,
+      "context_length": 200000,
       "created": 1755057810,
       "display_name": "Anthropic: Claude Sonnet 4",
       "id": "anthropic/claude-sonnet-4",
@@ -9163,127 +9178,37 @@
       "pricings": {
         "completion": [
           {
-            "conditions": {
-              "prompt_tokens": {
-                "gte": 0,
-                "lt": 200,
-                "unit": "kTokens"
-              }
-            },
             "currency": "USD",
             "unit": "perMTokens",
             "value": 15
-          },
-          {
-            "conditions": {
-              "prompt_tokens": {
-                "gte": 200,
-                "unit": "kTokens"
-              }
-            },
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 22.5
           }
         ],
         "input_cache_read": [
           {
-            "conditions": {
-              "prompt_tokens": {
-                "gte": 0,
-                "lt": 200,
-                "unit": "kTokens"
-              }
-            },
             "currency": "USD",
             "unit": "perMTokens",
             "value": 0.3
-          },
-          {
-            "conditions": {
-              "prompt_tokens": {
-                "gte": 200,
-                "unit": "kTokens"
-              }
-            },
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.6
           }
         ],
         "input_cache_write_1_h": [
           {
-            "conditions": {
-              "prompt_tokens": {
-                "gte": 0,
-                "lt": 200,
-                "unit": "kTokens"
-              }
-            },
             "currency": "USD",
             "unit": "perMTokens",
             "value": 6
-          },
-          {
-            "conditions": {
-              "prompt_tokens": {
-                "gte": 200,
-                "unit": "kTokens"
-              }
-            },
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 12
           }
         ],
         "input_cache_write_5_min": [
           {
-            "conditions": {
-              "prompt_tokens": {
-                "gte": 0,
-                "lt": 200,
-                "unit": "kTokens"
-              }
-            },
             "currency": "USD",
             "unit": "perMTokens",
             "value": 3.75
-          },
-          {
-            "conditions": {
-              "prompt_tokens": {
-                "gte": 200,
-                "unit": "kTokens"
-              }
-            },
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 7.5
           }
         ],
         "prompt": [
           {
-            "conditions": {
-              "prompt_tokens": {
-                "gte": 0,
-                "lt": 200,
-                "unit": "kTokens"
-              }
-            },
             "currency": "USD",
             "unit": "perMTokens",
             "value": 3
-          },
-          {
-            "conditions": {
-              "prompt_tokens": {
-                "gte": 200,
-                "unit": "kTokens"
-              }
-            },
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 6
           }
         ],
         "web_search": [
@@ -9291,47 +9216,6 @@
             "currency": "USD",
             "unit": "perCount",
             "value": 0.01
-          }
-        ]
-      }
-    },
-    {
-      "capabilities": {
-        "reasoning": false
-      },
-      "context_length": 128000,
-      "created": 1764123965,
-      "display_name": "Google: Gemma 3 12B",
-      "id": "google/gemma-3-12b-it",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "object": "model",
-      "output_modalities": [
-        "text"
-      ],
-      "owned_by": "google",
-      "pricings": {
-        "completion": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.096
-          }
-        ],
-        "input_cache_read": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.0048
-          }
-        ],
-        "prompt": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.024
           }
         ]
       }
