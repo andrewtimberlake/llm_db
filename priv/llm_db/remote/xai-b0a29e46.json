@@ -181,10 +181,11 @@
     },
     {
       "aliases": [
+        "grok-imagine-video-1.5-preview",
         "grok-imagine-video-1.5-2026-05-30"
       ],
       "created": 1779840000,
-      "id": "grok-imagine-video-1.5-preview",
+      "id": "grok-imagine-video-1.5",
       "object": "model",
       "owned_by": "xai"
     }

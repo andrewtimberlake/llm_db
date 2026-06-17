@@ -1,8 +1,8 @@
 {
   "last_modified": null,
   "source_url": "https://api.x.ai/v1/models",
-  "sha256": "4cb7a431a74c0c159072f701d7c8ff4968fc7f1420b6460fc6bfad1aa8bf40dc",
-  "downloaded_at": "2026-06-16T05:11:34.922384Z",
-  "size_bytes": 6055,
+  "sha256": "f64e5198590f26dabfe9306b194c0ed25ff20d24f7d66d5a42431ebd1a425d08",
+  "downloaded_at": "2026-06-17T04:53:59.399982Z",
+  "size_bytes": 6089,
   "etag": null
 }

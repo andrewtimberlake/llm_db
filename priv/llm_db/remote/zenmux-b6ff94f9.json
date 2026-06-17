@@ -2,6 +2,102 @@
   "data": [
     {
       "capabilities": {
+        "reasoning": false
+      },
+      "context_length": 1000000,
+      "created": 1781248729,
+      "display_name": "Z.AI: GLM 5.2",
+      "id": "z-ai/glm-5.2",
+      "input_modalities": [
+        "text"
+      ],
+      "object": "model",
+      "output_modalities": [
+        "text"
+      ],
+      "owned_by": "z-ai",
+      "pricings": {
+        "completion": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 4.4
+          }
+        ],
+        "input_cache_read": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.26
+          }
+        ],
+        "prompt": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 1.4
+          }
+        ],
+        "web_search": [
+          {
+            "currency": "USD",
+            "unit": "perCount",
+            "value": 0.01
+          }
+        ]
+      },
+      "publish_time": "2026-06-17"
+    },
+    {
+      "capabilities": {
+        "reasoning": false
+      },
+      "context_length": 1000000,
+      "created": 1781661332,
+      "display_name": "Z.AI: GLM 5.2 (Free)",
+      "id": "z-ai/glm-5.2-free",
+      "input_modalities": [
+        "text"
+      ],
+      "object": "model",
+      "output_modalities": [
+        "text"
+      ],
+      "owned_by": "z-ai",
+      "pricings": {
+        "completion": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0
+          }
+        ],
+        "input_cache_read": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0
+          }
+        ],
+        "prompt": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0
+          }
+        ],
+        "web_search": [
+          {
+            "currency": "USD",
+            "unit": "perCount",
+            "value": 0
+          }
+        ]
+      },
+      "publish_time": "2026-06-17"
+    },
+    {
+      "capabilities": {
         "reasoning": true
       },
       "context_length": 262144,
@@ -47,7 +143,8 @@
             "value": 0.005
           }
         ]
-      }
+      },
+      "publish_time": "2026-06-15"
     },
     {
       "capabilities": {
@@ -96,7 +193,8 @@
             "value": 0.005
           }
         ]
-      }
+      },
+      "publish_time": "2026-06-12"
     },
     {
       "capabilities": {
@@ -145,7 +243,8 @@
             "value": 0
           }
         ]
-      }
+      },
+      "publish_time": "2026-06-12"
     },
     {
       "capabilities": {
@@ -208,7 +307,8 @@
             "value": 0.014
           }
         ]
-      }
+      },
+      "publish_time": "2026-06-09"
     },
     {
       "capabilities": {
@@ -359,7 +459,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-06-02"
     },
     {
       "capabilities": {
@@ -456,7 +557,8 @@
             "value": 0.6
           }
         ]
-      }
+      },
+      "publish_time": "2026-06-01"
     },
     {
       "capabilities": {
@@ -498,7 +600,8 @@
             "value": 0.2
           }
         ]
-      }
+      },
+      "publish_time": "2026-05-29"
     },
     {
       "capabilities": {
@@ -540,7 +643,8 @@
             "value": 0
           }
         ]
-      }
+      },
+      "publish_time": "2026-05-29"
     },
     {
       "capabilities": {
@@ -603,7 +707,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-05-28"
     },
     {
       "capabilities": {
@@ -651,7 +756,8 @@
             "value": 0.005
           }
         ]
-      }
+      },
+      "publish_time": "2026-05-26"
     },
     {
       "capabilities": {
@@ -710,7 +816,8 @@
             "value": 0.005
           }
         ]
-      }
+      },
+      "publish_time": "2026-05-22"
     },
     {
       "capabilities": {
@@ -744,7 +851,42 @@
             "value": 0.1
           }
         ]
-      }
+      },
+      "publish_time": "2026-05-21"
+    },
+    {
+      "capabilities": {
+        "reasoning": false
+      },
+      "context_length": 8192,
+      "created": 1781588859,
+      "display_name": "Google: Gemini Embedding 2",
+      "id": "google/gemini-embedding-2",
+      "input_modalities": [
+        "text"
+      ],
+      "object": "model",
+      "output_modalities": [
+        "embeddings"
+      ],
+      "owned_by": "google",
+      "pricings": {
+        "completion": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0
+          }
+        ],
+        "prompt": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.2
+          }
+        ]
+      },
+      "publish_time": "2026-05-20"
     },
     {
       "capabilities": {
@@ -802,7 +944,8 @@
             "value": 0.014
           }
         ]
-      }
+      },
+      "publish_time": "2026-05-19"
     },
     {
       "capabilities": {
@@ -842,7 +985,8 @@
             "value": 0.3
           }
         ]
-      }
+      },
+      "publish_time": "2026-05-09"
     },
     {
       "capabilities": {
@@ -906,7 +1050,8 @@
             "value": 0.014
           }
         ]
-      }
+      },
+      "publish_time": "2026-05-09"
     },
     {
       "capabilities": {
@@ -982,7 +1127,8 @@
             "value": 0.0006
           }
         ]
-      }
+      },
+      "publish_time": "2026-05-09"
     },
     {
       "capabilities": {
@@ -1031,7 +1177,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-05-05"
     },
     {
       "capabilities": {
@@ -1133,7 +1280,8 @@
             "value": 0.005
           }
         ]
-      }
+      },
+      "publish_time": "2026-05-01"
     },
     {
       "capabilities": {
@@ -1282,7 +1430,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-04-27"
     },
     {
       "capabilities": {
@@ -1360,7 +1509,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-04-25"
     },
     {
       "capabilities": {
@@ -1463,7 +1613,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-04-25"
     },
     {
       "capabilities": {
@@ -1503,7 +1654,8 @@
             "value": 0.14
           }
         ]
-      }
+      },
+      "publish_time": "2026-04-24"
     },
     {
       "capabilities": {
@@ -1526,24 +1678,25 @@
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 0.8865
+            "value": 0.87
           }
         ],
         "input_cache_read": [
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 0.0037
+            "value": 0.003625
           }
         ],
         "prompt": [
           {
             "currency": "USD",
             "unit": "perMTokens",
-            "value": 0.4433
+            "value": 0.435
           }
         ]
-      }
+      },
+      "publish_time": "2026-04-24"
     },
     {
       "capabilities": {
@@ -1583,7 +1736,8 @@
             "value": 0.3
           }
         ]
-      }
+      },
+      "publish_time": "2026-04-23"
     },
     {
       "capabilities": {
@@ -1684,7 +1838,8 @@
             "value": 0.005
           }
         ]
-      }
+      },
+      "publish_time": "2026-04-23"
     },
     {
       "capabilities": {
@@ -1814,7 +1969,8 @@
             "value": 0.286
           }
         ]
-      }
+      },
+      "publish_time": "2026-04-23"
     },
     {
       "capabilities": {
@@ -1918,7 +2074,8 @@
             "value": 0.005
           }
         ]
-      }
+      },
+      "publish_time": "2026-04-23"
     },
     {
       "capabilities": {
@@ -1958,7 +2115,8 @@
             "value": 0.1
           }
         ]
-      }
+      },
+      "publish_time": "2026-04-22"
     },
     {
       "capabilities": {
@@ -1992,7 +2150,8 @@
             "value": 5
           }
         ]
-      }
+      },
+      "publish_time": "2026-04-22"
     },
     {
       "capabilities": {
@@ -2041,7 +2200,8 @@
             "value": 0.005
           }
         ]
-      }
+      },
+      "publish_time": "2026-04-21"
     },
     {
       "capabilities": {
@@ -2104,7 +2264,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-04-16"
     },
     {
       "capabilities": {
@@ -2205,7 +2366,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-04-03"
     },
     {
       "capabilities": {
@@ -2357,7 +2519,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-04-02"
     },
     {
       "capabilities": {
@@ -2461,7 +2624,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-04-02"
     },
     {
       "capabilities": {
@@ -2501,7 +2665,8 @@
             "value": 0.3
           }
         ]
-      }
+      },
+      "publish_time": "2026-03-30"
     },
     {
       "capabilities": {
@@ -2548,7 +2713,8 @@
             "value": 0.3
           }
         ]
-      }
+      },
+      "publish_time": "2026-03-18"
     },
     {
       "capabilities": {
@@ -2595,7 +2761,8 @@
             "value": 0.611
           }
         ]
-      }
+      },
+      "publish_time": "2026-03-18"
     },
     {
       "capabilities": {
@@ -2644,7 +2811,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-03-17"
     },
     {
       "capabilities": {
@@ -2693,7 +2861,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-03-17"
     },
     {
       "capabilities": {
@@ -2733,7 +2902,8 @@
             "value": 0.28
           }
         ]
-      }
+      },
+      "publish_time": "2026-03-16"
     },
     {
       "capabilities": {
@@ -2741,7 +2911,7 @@
       },
       "context_length": 200000,
       "created": 1773648679,
-      "display_name": "Z.ai: GLM 5 Turbo",
+      "display_name": "Z.AI: GLM 5 Turbo",
       "id": "z-ai/glm-5-turbo",
       "input_modalities": [
         "text"
@@ -2834,7 +3004,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-03-16"
     },
     {
       "capabilities": {
@@ -2918,7 +3089,8 @@
             "value": 0.005
           }
         ]
-      }
+      },
+      "publish_time": "2026-03-06"
     },
     {
       "capabilities": {
@@ -3002,7 +3174,8 @@
             "value": 0.005
           }
         ]
-      }
+      },
+      "publish_time": "2026-03-06"
     },
     {
       "capabilities": {
@@ -3105,7 +3278,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-03-05"
     },
     {
       "capabilities": {
@@ -3183,7 +3357,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-03-05"
     },
     {
       "capabilities": {
@@ -3247,7 +3422,8 @@
             "value": 0.014
           }
         ]
-      }
+      },
+      "publish_time": "2026-03-04"
     },
     {
       "capabilities": {
@@ -3296,7 +3472,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-03-04"
     },
     {
       "capabilities": {
@@ -3357,7 +3534,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-02-25"
     },
     {
       "capabilities": {
@@ -3508,7 +3686,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-02-25"
     },
     {
       "capabilities": {
@@ -3620,7 +3799,8 @@
             "value": 0.014
           }
         ]
-      }
+      },
+      "publish_time": "2026-02-19"
     },
     {
       "capabilities": {
@@ -3683,7 +3863,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-02-18"
     },
     {
       "capabilities": {
@@ -3835,7 +4016,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-02-16"
     },
     {
       "capabilities": {
@@ -3974,7 +4156,8 @@
             "value": 0.12
           }
         ]
-      }
+      },
+      "publish_time": "2026-02-14"
     },
     {
       "capabilities": {
@@ -4113,7 +4296,8 @@
             "value": 0.25
           }
         ]
-      }
+      },
+      "publish_time": "2026-02-14"
     },
     {
       "capabilities": {
@@ -4252,7 +4436,8 @@
             "value": 1.34
           }
         ]
-      }
+      },
+      "publish_time": "2026-02-14"
     },
     {
       "capabilities": {
@@ -4391,7 +4576,8 @@
             "value": 1.34
           }
         ]
-      }
+      },
+      "publish_time": "2026-02-14"
     },
     {
       "capabilities": {
@@ -4438,7 +4624,8 @@
             "value": 0.3
           }
         ]
-      }
+      },
+      "publish_time": "2026-02-13"
     },
     {
       "capabilities": {},
@@ -4453,7 +4640,8 @@
       "output_modalities": [
         "text"
       ],
-      "owned_by": "minimax"
+      "owned_by": "minimax",
+      "publish_time": "2026-02-13"
     },
     {
       "capabilities": {
@@ -4554,7 +4742,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-02-11"
     },
     {
       "capabilities": {
@@ -4603,7 +4792,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-02-06"
     },
     {
       "capabilities": {
@@ -4666,7 +4856,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-02-05"
     },
     {
       "capabilities": {
@@ -4699,7 +4890,8 @@
             "value": 0.1
           }
         ]
-      }
+      },
+      "publish_time": "2026-02-02"
     },
     {
       "capabilities": {
@@ -4748,7 +4940,8 @@
             "value": 0.0044
           }
         ]
-      }
+      },
+      "publish_time": "2026-01-27"
     },
     {
       "capabilities": {
@@ -4957,7 +5150,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-01-23"
     },
     {
       "capabilities": {
@@ -4990,7 +5184,8 @@
             "value": 0.3
           }
         ]
-      }
+      },
+      "publish_time": "2026-01-23"
     },
     {
       "capabilities": {
@@ -5068,7 +5263,8 @@
             "value": 0.0006
           }
         ]
-      }
+      },
+      "publish_time": "2026-01-22"
     },
     {
       "capabilities": {
@@ -5115,7 +5311,8 @@
             "value": 0
           }
         ]
-      }
+      },
+      "publish_time": "2026-01-19"
     },
     {
       "capabilities": {
@@ -5162,7 +5359,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-01-19"
     },
     {
       "capabilities": {
@@ -5211,7 +5409,42 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2026-01-15"
+    },
+    {
+      "capabilities": {
+        "reasoning": false
+      },
+      "context_length": 8192,
+      "created": 1781608477,
+      "display_name": "Qwen: Qwen3 VL Embedding",
+      "id": "qwen/qwen3-vl-embedding",
+      "input_modalities": [
+        "text"
+      ],
+      "object": "model",
+      "output_modalities": [
+        "embeddings"
+      ],
+      "owned_by": "qwen",
+      "pricings": {
+        "completion": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0
+          }
+        ],
+        "prompt": [
+          {
+            "currency": "USD",
+            "unit": "perMTokens",
+            "value": 0.1
+          }
+        ]
+      },
+      "publish_time": "2026-01-08"
     },
     {
       "capabilities": {
@@ -5390,7 +5623,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-12-23"
     },
     {
       "capabilities": {
@@ -5437,7 +5671,8 @@
             "value": 0.3
           }
         ]
-      }
+      },
+      "publish_time": "2025-12-22"
     },
     {
       "capabilities": {
@@ -5546,7 +5781,8 @@
             "value": 0.34
           }
         ]
-      }
+      },
+      "publish_time": "2025-12-18"
     },
     {
       "capabilities": {
@@ -5610,7 +5846,8 @@
             "value": 0.014
           }
         ]
-      }
+      },
+      "publish_time": "2025-12-17"
     },
     {
       "capabilities": {
@@ -5657,7 +5894,8 @@
             "value": 0.005
           }
         ]
-      }
+      },
+      "publish_time": "2025-12-17"
     },
     {
       "capabilities": {
@@ -5699,7 +5937,8 @@
             "value": 5
           }
         ]
-      }
+      },
+      "publish_time": "2025-12-16"
     },
     {
       "capabilities": {
@@ -5741,7 +5980,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-12-12"
     },
     {
       "capabilities": {
@@ -5790,7 +6030,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-12-11"
     },
     {
       "capabilities": {
@@ -5839,7 +6080,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-12-11"
     },
     {
       "capabilities": {
@@ -5942,7 +6184,8 @@
             "value": 0
           }
         ]
-      }
+      },
+      "publish_time": "2025-12-08"
     },
     {
       "capabilities": {
@@ -6045,7 +6288,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-12-08"
     },
     {
       "capabilities": {
@@ -6148,7 +6392,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-12-08"
     },
     {
       "capabilities": {
@@ -6188,7 +6433,8 @@
             "value": 0.293
           }
         ]
-      }
+      },
+      "publish_time": "2025-12-05"
     },
     {
       "capabilities": {
@@ -6229,7 +6475,8 @@
             "value": 0.5
           }
         ]
-      }
+      },
+      "publish_time": "2025-12-02"
     },
     {
       "capabilities": {
@@ -6269,7 +6516,8 @@
             "value": 0.14
           }
         ]
-      }
+      },
+      "publish_time": "2025-12-01"
     },
     {
       "capabilities": {
@@ -6309,7 +6557,8 @@
             "value": 0.14
           }
         ]
-      }
+      },
+      "publish_time": "2025-12-01"
     },
     {
       "capabilities": {
@@ -6372,7 +6621,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-11-24"
     },
     {
       "capabilities": {
@@ -6420,7 +6670,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-11-13"
     },
     {
       "capabilities": {
@@ -6469,7 +6720,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-11-13"
     },
     {
       "capabilities": {
@@ -6517,7 +6769,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-11-13"
     },
     {
       "capabilities": {
@@ -6566,7 +6819,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-11-13"
     },
     {
       "capabilities": {
@@ -6674,7 +6928,8 @@
             "value": 0.0056
           }
         ]
-      }
+      },
+      "publish_time": "2025-11-11"
     },
     {
       "capabilities": {
@@ -6743,7 +6998,8 @@
             "value": 0.76
           }
         ]
-      }
+      },
+      "publish_time": "2025-11-09"
     },
     {
       "capabilities": {
@@ -6776,7 +7032,8 @@
             "value": 0.02
           }
         ]
-      }
+      },
+      "publish_time": "2025-10-31"
     },
     {
       "capabilities": {
@@ -6809,7 +7066,8 @@
             "value": 0.13
           }
         ]
-      }
+      },
+      "publish_time": "2025-10-31"
     },
     {
       "capabilities": {
@@ -6856,7 +7114,8 @@
             "value": 0.3
           }
         ]
-      }
+      },
+      "publish_time": "2025-10-27"
     },
     {
       "capabilities": {
@@ -6918,7 +7177,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-10-15"
     },
     {
       "capabilities": {
@@ -6960,7 +7220,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-10-06"
     },
     {
       "capabilities": {
@@ -7139,7 +7400,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-09-30"
     },
     {
       "capabilities": {
@@ -7292,7 +7554,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-09-29"
     },
     {
       "capabilities": {
@@ -7325,7 +7588,8 @@
             "value": 0.216
           }
         ]
-      }
+      },
+      "publish_time": "2025-09-29"
     },
     {
       "capabilities": {
@@ -7528,7 +7792,8 @@
             "value": 0.6
           }
         ]
-      }
+      },
+      "publish_time": "2025-09-23"
     },
     {
       "capabilities": {
@@ -7576,7 +7841,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-09-23"
     },
     {
       "capabilities": {
@@ -7616,7 +7882,8 @@
             "value": 0.0006
           }
         ]
-      }
+      },
+      "publish_time": "2025-09-08"
     },
     {
       "capabilities": {
@@ -7631,7 +7898,7 @@
       ],
       "object": "model",
       "output_modalities": [
-        "text"
+        "transcription"
       ],
       "owned_by": "qwen",
       "pricings": {
@@ -7642,7 +7909,8 @@
             "value": 3.5e-5
           }
         ]
-      }
+      },
+      "publish_time": "2025-09-08"
     },
     {
       "capabilities": {
@@ -7682,7 +7950,8 @@
             "value": 0.28
           }
         ]
-      }
+      },
+      "publish_time": "2025-08-21"
     },
     {
       "capabilities": {
@@ -7731,7 +8000,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-08-07"
     },
     {
       "capabilities": {
@@ -7780,7 +8050,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-08-07"
     },
     {
       "capabilities": {
@@ -7829,7 +8100,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-08-07"
     },
     {
       "capabilities": {
@@ -7878,7 +8150,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-08-07"
     },
     {
       "capabilities": {
@@ -7941,7 +8214,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-08-05"
     },
     {
       "capabilities": {
@@ -8061,7 +8335,8 @@
             "value": 0.57
           }
         ]
-      }
+      },
+      "publish_time": "2025-07-31"
     },
     {
       "capabilities": {
@@ -8240,7 +8515,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-07-25"
     },
     {
       "capabilities": {
@@ -8416,7 +8692,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-07-25"
     },
     {
       "capabilities": {
@@ -8678,7 +8955,8 @@
             "value": 6
           }
         ]
-      }
+      },
+      "publish_time": "2025-07-23"
     },
     {
       "capabilities": {
@@ -8749,7 +9027,8 @@
             "value": 0.035
           }
         ]
-      }
+      },
+      "publish_time": "2025-07-22"
     },
     {
       "capabilities": {
@@ -8789,7 +9068,8 @@
             "value": 0.28
           }
         ]
-      }
+      },
+      "publish_time": "2025-07-21"
     },
     {
       "capabilities": {
@@ -8829,7 +9109,8 @@
             "value": 0.28
           }
         ]
-      }
+      },
+      "publish_time": "2025-07-21"
     },
     {
       "capabilities": {
@@ -8869,7 +9150,8 @@
             "value": 1.25
           }
         ]
-      }
+      },
+      "publish_time": "2025-07-21"
     },
     {
       "capabilities": {
@@ -8940,7 +9222,8 @@
             "value": 0.035
           }
         ]
-      }
+      },
+      "publish_time": "2025-06-17"
     },
     {
       "capabilities": {
@@ -9052,7 +9335,8 @@
             "value": 0.035
           }
         ]
-      }
+      },
+      "publish_time": "2025-06-17"
     },
     {
       "capabilities": {
@@ -9092,7 +9376,8 @@
             "value": 0.56
           }
         ]
-      }
+      },
+      "publish_time": "2025-05-28"
     },
     {
       "capabilities": {
@@ -9155,7 +9440,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-05-22"
     },
     {
       "capabilities": {
@@ -9218,7 +9504,8 @@
             "value": 0.01
           }
         ]
-      }
+      },
+      "publish_time": "2025-05-22"
     },
     {
       "capabilities": {
@@ -9258,7 +9545,8 @@
             "value": 0.14
           }
         ]
-      }
+      },
+      "publish_time": "2025-04-28"
     },
     {
       "capabilities": {
@@ -9299,7 +9587,8 @@
             "value": 1.1
           }
         ]
-      }
+      },
+      "publish_time": "2025-04-16"
     },
     {
       "capabilities": {
@@ -9341,7 +9630,8 @@
             "value": 0.4
           }
         ]
-      }
+      },
+      "publish_time": "2025-04-14"
     },
     {
       "capabilities": {
@@ -9383,7 +9673,8 @@
             "value": 0.1
           }
         ]
-      }
+      },
+      "publish_time": "2025-04-14"
     },
     {
       "capabilities": {
@@ -9432,7 +9723,8 @@
             "value": 0.025
           }
         ]
-      }
+      },
+      "publish_time": "2025-04-14"
     },
     {
       "capabilities": {
@@ -9466,7 +9758,8 @@
             "value": 0.08
           }
         ]
-      }
+      },
+      "publish_time": "2025-04-04"
     },
     {
       "capabilities": {
@@ -9499,7 +9792,8 @@
             "value": 0.6
           }
         ]
-      }
+      },
+      "publish_time": "2024-12-06"
     },
     {
       "capabilities": {
@@ -9547,7 +9841,8 @@
             "value": 0.8
           }
         ]
-      }
+      },
+      "publish_time": "2024-11-04"
     },
     {
       "capabilities": {
@@ -9588,7 +9883,8 @@
             "value": 0.15
           }
         ]
-      }
+      },
+      "publish_time": "2024-07-18"
     },
     {
       "capabilities": {
@@ -9630,7 +9926,8 @@
             "value": 2.5
           }
         ]
-      }
+      },
+      "publish_time": "2024-05-13"
     }
   ],
   "object": "list"
