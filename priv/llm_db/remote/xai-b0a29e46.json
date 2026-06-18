@@ -168,7 +168,7 @@
       "context_length": 8000,
       "created": 1775174400,
       "id": "grok-imagine-image-quality",
-      "image_price": 400000000,
+      "image_price": 500000000,
       "object": "model",
       "owned_by": "xai"
     },
