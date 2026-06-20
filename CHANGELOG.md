@@ -7,6 +7,21 @@ This project uses [Calendar Versioning](https://calver.org/) with the format `YY
 
 <!-- changelog -->
 
+## [2026.6.3](https://github.com/agentjido/llm_db/compare/2026.6.3...2026.6.3) (2026-06-20)
+
+
+
+
+### Features:
+
+* Adds Azure DeepSeek V4 pricing data (#214) by ycastorium
+
+### Bug Fixes:
+
+* update minimax m3 token limits by mikehostetler
+
+* preserve models.dev provider api urls by mikehostetler
+
 ## [2026.6.2](https://github.com/agentjido/llm_db/compare/2026.6.2...2026.6.2) (2026-06-14)
 
 
