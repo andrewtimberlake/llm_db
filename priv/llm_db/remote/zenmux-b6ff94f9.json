@@ -200,56 +200,6 @@
       "capabilities": {
         "reasoning": true
       },
-      "context_length": 262144,
-      "created": 1781263793,
-      "display_name": "MoonshotAI: Kimi K2.7 Code (Free)",
-      "id": "moonshotai/kimi-k2.7-code-free",
-      "input_modalities": [
-        "text",
-        "image",
-        "video"
-      ],
-      "object": "model",
-      "output_modalities": [
-        "text"
-      ],
-      "owned_by": "moonshotai",
-      "pricings": {
-        "completion": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0
-          }
-        ],
-        "input_cache_read": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0
-          }
-        ],
-        "prompt": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0
-          }
-        ],
-        "web_search": [
-          {
-            "currency": "USD",
-            "unit": "perCount",
-            "value": 0
-          }
-        ]
-      },
-      "publish_time": "2026-06-12"
-    },
-    {
-      "capabilities": {
-        "reasoning": true
-      },
       "context_length": 1000000,
       "created": 1781036493,
       "display_name": "Anthropic: Claude Fable 5",
@@ -9796,9 +9746,7 @@
       "publish_time": "2024-12-06"
     },
     {
-      "capabilities": {
-        "reasoning": false
-      },
+      "capabilities": {},
       "context_length": 200000,
       "created": 1755152798,
       "display_name": "Anthropic: Claude 3.5 Haiku",
@@ -9812,36 +9760,6 @@
         "text"
       ],
       "owned_by": "anthropic",
-      "pricings": {
-        "completion": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 4
-          }
-        ],
-        "input_cache_read": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.08
-          }
-        ],
-        "input_cache_write_5_min": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 1
-          }
-        ],
-        "prompt": [
-          {
-            "currency": "USD",
-            "unit": "perMTokens",
-            "value": 0.8
-          }
-        ]
-      },
       "publish_time": "2024-11-04"
     },
     {
